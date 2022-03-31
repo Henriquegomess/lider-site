@@ -1,26 +1,19 @@
+import { CssBaseline } from '@mui/material';
+import { ThemeProvider } from '@mui/system';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Footer } from './Components/Footer';
+import { RoutesPage } from './Components/Routes';
+import { LiderTheme } from './Components/Theme';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={LiderTheme()}>
+      <CssBaseline />
+      {/* <Header /> */}
+      <RoutesPage />
+      <Footer />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
