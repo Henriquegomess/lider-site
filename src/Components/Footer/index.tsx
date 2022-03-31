@@ -64,13 +64,22 @@ const Footer: React.FC = () => {
           padding: '1.2rem 0',
         }}
       >
-        <a href="https://www.canva.com/" style={{ paddingRight: '1.2rem' }}>
+        <a
+          href="https://www.facebook.com/AmazonLider/"
+          style={{ paddingRight: '1.2rem' }}
+        >
           <img src="face.png" alt="Facebook" />
         </a>
-        <a href="https://www.canva.com/" style={{ paddingRight: '1.2rem' }}>
+        <a
+          href="https://www.instagram.com/amazon.lider/"
+          style={{ paddingRight: '1.2rem' }}
+        >
           <img src="insta.png" alt="Instagram" />
         </a>
-        <a href="https://www.canva.com/" style={{ paddingRight: '1.2rem' }}>
+        <a
+          href="https://www.instagram.com/amazon.lider/"
+          style={{ paddingRight: '1.2rem' }}
+        >
           <img src="wpp.png" alt="WhatsApp" />
         </a>
       </div>
