@@ -39,7 +39,7 @@ const Home: React.FC = () => {
       <Box
         sx={{
           width: '100%',
-          height: { lg: '100%', 'iphone-5-SE': '42vh' },
+          height: { lg: '100%', 'iphone-5-SE': '50%' },
         }}
       >
         <Splide

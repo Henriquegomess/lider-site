@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
           <img src="face.png" alt="Facebook" />
         </a>
         <a
-          href="https://www.instagram.com/amazon.lider/"
+          href="https://www.instagram.com/lider.manaus/"
           style={{ paddingRight: '1.2rem' }}
         >
           <img src="insta.png" alt="Instagram" />
