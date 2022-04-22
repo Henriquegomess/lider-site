@@ -162,7 +162,7 @@ const Home: React.FC = () => {
           display: 'flex',
           flexDirection: { 'iphone-5-SE': 'column', lg: 'row' },
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'space-around',
         }}
       >
         <Box
@@ -214,7 +214,7 @@ const Home: React.FC = () => {
           data-aos-duration="1000"
           src="imagem3.png"
           alt="Onibus"
-          style={{ width: '60%', paddingTop: '2.4rem' }}
+          style={{ width: '50%', paddingTop: '2.4rem' }}
           loading="lazy"
         />
         <Typography
