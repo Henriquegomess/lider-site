@@ -444,10 +444,12 @@ const Home: React.FC = () => {
           <div></div>
         </Box>
         <Box>
-          <Box>
+          <Box data-aos="flip-right">
             <CardGreenComponent />
           </Box>
           <Box
+            data-aos="fade-down"
+            data-aos-duration="1000"
             sx={{
               display: 'flex',
               flexDirection: 'column',
