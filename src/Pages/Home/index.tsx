@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/iframe-has-title */
 import { Box, Button, Divider, TextField, Typography } from '@mui/material';
@@ -39,7 +40,53 @@ const Home: React.FC = () => {
       <Box
         sx={{
           width: '100%',
-          height: { lg: '100%', 'iphone-5-SE': '50%' },
+          height: { lg: '90vh' },
+          display: { lg: 'flex', 'iphone-5-SE': 'none' },
+        }}
+      >
+        <Splide
+          options={{
+            rewind: true,
+            width: '100%',
+            height: '90vh',
+            gap: '1rem',
+            autoplay: true,
+          }}
+        >
+          <SplideSlide>
+            <img
+              src="home.png"
+              alt="Image 1"
+              width="100%"
+              height="100%"
+              loading="lazy"
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <img
+              src="slide2.png"
+              alt="Image 2"
+              width="100%"
+              height="100%"
+              loading="lazy"
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <img
+              src="slide3.png"
+              alt="Image 1"
+              width="100%"
+              height="100%"
+              loading="lazy"
+            />
+          </SplideSlide>
+        </Splide>
+      </Box>
+      <Box
+        sx={{
+          width: '100%',
+          height: { 'iphone-5-SE': '50%' },
+          display: { lg: 'none' },
         }}
       >
         <Splide
@@ -52,22 +99,40 @@ const Home: React.FC = () => {
           }}
         >
           <SplideSlide>
-            <img src="home.png" alt="Image 1" width="100%" height="100%" />
+            <img
+              src="home.png"
+              alt="Image 1"
+              width="100%"
+              height="100%"
+              loading="lazy"
+            />
           </SplideSlide>
           <SplideSlide>
-            <img src="slide2.png" alt="Image 2" width="100%" height="100%" />
+            <img
+              src="slide2.png"
+              alt="Image 2"
+              width="100%"
+              height="100%"
+              loading="lazy"
+            />
           </SplideSlide>
           <SplideSlide>
-            <img src="slide3.png" alt="Image 1" width="100%" height="100%" />
+            <img
+              src="slide3.png"
+              alt="Image 1"
+              width="100%"
+              height="100%"
+              loading="lazy"
+            />
           </SplideSlide>
         </Splide>
       </Box>
 
-      <section
-        style={{
+      <Box
+        sx={{
           height: '100%',
           backgroundImage: 'linear-gradient(to right, #095134, #168D63)',
-          padding: '0.8rem',
+          padding: { lg: '1.6rem', 'iphone-5-SE': '0.8rem' },
         }}
       >
         <Typography
@@ -81,14 +146,14 @@ const Home: React.FC = () => {
           Temos proteções COVID-19 em nosso escritório, que incluem o uso de
           máscaras e verificações de temperatura.
         </Typography>
-      </section>
+      </Box>
 
       <Box
         sx={{
           height: '90vh',
           padding: '0.8rem',
           backgroundColor: '#ECF0F1',
-          backgroundImage: `url(/bg1.png)`,
+          backgroundImage: `url(/bgReto.png)`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           display: 'flex',
@@ -110,6 +175,7 @@ const Home: React.FC = () => {
               fontSize: { 'iphone-5-SE': '2rem', lg: '2.4rem' },
               fontWeight: 'bold',
               paddingTop: '2rem',
+              fontFamily: 'Oswald',
             }}
           >
             AMAZON LIDER
@@ -144,37 +210,41 @@ const Home: React.FC = () => {
           style={{ width: '60%', paddingTop: '2.4rem' }}
           loading="lazy"
         />
-
         <Typography
           sx={{
-            paddingRight: '5.6rem',
-            paddingLeft: '1rem',
-            transform: `rotate(90deg)`,
+            writingMode: 'vertical-rl',
             display: { 'iphone-5-SE': 'none', lg: 'flex' },
             color: '#9F9F9F',
             opacity: 0.5,
             fontWeight: 'bold',
             fontSize: '4rem',
-            width: '100%',
+            pr: '4rem',
+            pl: '4rem',
           }}
         >
           QUEM SOMOS
         </Typography>
       </Box>
 
-      <section style={{ height: '100%', padding: '0.8rem' }}>
+      <Box
+        sx={{
+          height: '100%',
+          padding: { 'iphone-5-SE': '0.8rem', lg: '2rem' },
+        }}
+      >
         <Typography
-          style={{
+          sx={{
             color: '#168D63',
-            // textTransform: 'uppercase',
-            fontSize: '1rem',
+            textTransform: 'uppercase',
+            fontSize: { 'iphone-5-SE': '0.8rem', lg: '1.6rem' },
             textAlign: 'center',
+            fontWeight: 'bold',
           }}
         >
           Trabalhando com o compromisso de atender e satisfazer cliente com o
           que há de melhor e mais inovador no mercado.
         </Typography>
-      </section>
+      </Box>
 
       <section
         style={{
@@ -302,7 +372,12 @@ const Home: React.FC = () => {
                 justifyContent: 'center',
               }}
             >
-              <img src="custo.png" alt="onibus" style={{ width: '30%' }} />
+              <img
+                src="custo.png"
+                alt="onibus"
+                style={{ width: '30%' }}
+                loading="lazy"
+              />
               <Typography
                 style={{
                   fontSize: '0.8rem',
@@ -315,7 +390,12 @@ const Home: React.FC = () => {
               >
                 Custos Menores
               </Typography>
-              <img src="capital.png" alt="onibus" style={{ width: '30%' }} />
+              <img
+                src="capital.png"
+                alt="onibus"
+                style={{ width: '30%' }}
+                loading="lazy"
+              />
               <Typography
                 style={{
                   fontSize: '0.8rem',
@@ -332,6 +412,7 @@ const Home: React.FC = () => {
                 src="acompanhamento.png"
                 alt="onibus"
                 style={{ width: '30%' }}
+                loading="lazy"
               />
               <Typography
                 style={{
@@ -357,7 +438,12 @@ const Home: React.FC = () => {
                 paddingTop: '1rem',
               }}
             >
-              <img src="orcamento.png" alt="onibus" style={{ width: '30%' }} />
+              <img
+                src="orcamento.png"
+                alt="onibus"
+                style={{ width: '30%' }}
+                loading="lazy"
+              />
               <Typography
                 style={{
                   fontSize: '0.8rem',
@@ -374,6 +460,7 @@ const Home: React.FC = () => {
                 src="monitoramento.png"
                 alt="onibus"
                 style={{ width: '30%' }}
+                loading="lazy"
               />
               <Typography
                 style={{
@@ -387,7 +474,12 @@ const Home: React.FC = () => {
               >
                 Monitoramento
               </Typography>
-              <img src="like.png" alt="onibus" style={{ width: '30%' }} />
+              <img
+                src="like.png"
+                alt="onibus"
+                style={{ width: '30%' }}
+                loading="lazy"
+              />
               <Typography
                 style={{
                   fontSize: '0.8rem',
@@ -460,20 +552,20 @@ const Home: React.FC = () => {
         />
       </Box>
 
-      <section
-        style={{
+      <Box
+        sx={{
           height: '100%',
           padding: '0.8rem',
           backgroundColor: '#ECF0F1',
         }}
       >
-        {/* <h1>TRABALHE CONOSCO</h1> */}
         <Typography
-          style={{
+          sx={{
             color: '#168D63',
             fontSize: '2rem',
             fontWeight: 'bold',
             textAlign: 'left',
+            fontFamily: 'Oswald',
           }}
         >
           TRABALHE CONOSCO
@@ -498,7 +590,10 @@ const Home: React.FC = () => {
         // }}
         >
           <form
-            style={{ display: 'flex', flexDirection: 'column' }}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+            }}
             action="https://formspree.io/f/xvodyjob"
             method="POST"
             // encType="multipart/form-data"
@@ -508,7 +603,7 @@ const Home: React.FC = () => {
               label="Nome Completo"
               variant="outlined"
               name="Nome completo:"
-              sx={{
+              style={{
                 fontSize: '1.2rem',
                 marginBottom: '1.2rem',
                 marginTop: '1.2rem',
@@ -548,7 +643,7 @@ const Home: React.FC = () => {
           </form>
         </Box>
         {/* <Form /> */}
-      </section>
+      </Box>
     </>
   );
 };

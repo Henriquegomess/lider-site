@@ -1,110 +1,81 @@
-import React, { useState } from 'react';
-import { styled } from '@mui/material/styles';
-import ButtonBase from '@mui/material/ButtonBase';
-import { Divider, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 import { Box } from '@mui/system';
-import { Header } from '../../Components/Header';
-import { CardComponent } from '../../Components/Card';
-import { CardWithImageComponent } from '../../Components/CardWithImage';
-import { CardRodoviarioComponent } from '../../Components/CardRodoviario';
+import React, { useState } from 'react';
 import { CardExecutivoComponent } from '../../Components/CardExecutivo';
+import { CardRodoviarioComponent } from '../../Components/CardRodoviario';
+import { Header } from '../../Components/Header';
 
-const images = [
+function srcset(image: string, size: number, rows = 1, cols = 1) {
+  return {
+    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
+    srcSet: `${image}?w=${size * cols}&h=${
+      size * rows
+    }&fit=crop&auto=format&dpr=2 2x`,
+  };
+}
+
+const itemData = [
   {
-    url: '/home.png',
-    title: 'Conforto',
-    width: '40%',
+    img: '/slide3.png',
+    title: 'Breakfast',
+    rows: 2,
+    cols: 2,
   },
   {
-    url: '/slide2.png',
-    title: 'Segurança',
-    width: '30%',
+    img: '/home.png',
+    title: 'Burger',
   },
   {
-    url: '/slide3.png',
-    title: 'Eficiência',
-    width: '30%',
+    img: '/slide2.png',
+    title: 'Camera',
   },
   {
-    url: '/imagem3.png',
-    title: 'Economia',
-    width: '40%',
+    img: '/imagem3.png',
+    title: 'Coffee',
+    cols: 2,
   },
   {
-    url: '/frota.png',
-    title: 'Monitoramento',
-    width: '30%',
+    img: '/frota.png',
+    title: 'Hats',
+    cols: 2,
   },
   {
-    url: '/imagem5.png',
-    title: 'Nossa frota',
-    width: '30%',
+    img: '/imagem5.png',
+    title: 'Honey',
+    author: '@arwinneil',
+    rows: 2,
+    cols: 2,
+  },
+  {
+    img: '/slide2.png',
+    title: 'Basketball',
+  },
+  {
+    img: '/slide3.png',
+    title: 'Fern',
+  },
+  {
+    img: '/imagem5.png',
+    title: 'Mushrooms',
+    rows: 2,
+    cols: 2,
+  },
+  {
+    img: '/home.png',
+    title: 'Tomato basil',
+  },
+  {
+    img: '/imagem3.png',
+    title: 'Sea star',
+  },
+  {
+    img: '/slide3.png',
+    title: 'Bike',
+    cols: 2,
   },
 ];
-
-const ImageButton = styled(ButtonBase)(({ theme }) => ({
-  position: 'relative',
-  height: 400,
-  [theme.breakpoints.down('sm')]: {
-    width: '100% !important', // Overrides inline-style
-    height: 100,
-  },
-  '&:hover, &.Mui-focusVisible': {
-    zIndex: 1,
-    '& .MuiImageBackdrop-root': {
-      opacity: 0.15,
-    },
-    '& .MuiImageMarked-root': {
-      opacity: 0,
-    },
-    '& .MuiTypography-root': {
-      border: '4px solid currentColor',
-    },
-  },
-}));
-
-const ImageSrc = styled('span')({
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center 40%',
-});
-
-const Image = styled('span')(({ theme }) => ({
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  color: theme.palette.common.white,
-}));
-
-const ImageBackdrop = styled('span')(({ theme }) => ({
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  backgroundColor: theme.palette.common.black,
-  opacity: 0.4,
-  transition: theme.transitions.create('opacity'),
-}));
-
-const ImageMarked = styled('span')(({ theme }) => ({
-  height: 3,
-  width: 18,
-  backgroundColor: theme.palette.common.white,
-  position: 'absolute',
-  bottom: -2,
-  left: 'calc(50% - 9px)',
-  transition: theme.transitions.create('opacity'),
-}));
 
 const Frota: React.FC = () => {
   const [showAdvancedMode, setShowAdvancedMode] = useState(false);
@@ -120,31 +91,54 @@ const Frota: React.FC = () => {
           backgroundSize: 'cover',
         }}
       ></Box>
-      <section
-        style={{
+      <Box
+        sx={{
           height: '100%',
           backgroundImage: 'linear-gradient(to right, #095134, #168D63)',
-          padding: '0.8rem',
+          padding: { 'iphone-5-SE': '0.8rem', lg: '0.2rem' },
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         <Typography
           sx={{
-            fontSize: { 'iphone-5-SE': '1.4rem', lg: '2.4rem' },
-            textAlign: 'center',
+            fontSize: { 'iphone-5-SE': '2.4rem', lg: '6.4rem' },
             color: '#FFF',
-            alignItems: 'center',
             fontWeight: 'bold',
+            WebkitTextFillColor: 'transparent',
+            WebkitTextStroke: '1px white',
+            opacity: 0.15,
           }}
         >
           NOSSA FROTA
         </Typography>
-      </section>
-      <section>
+        <Typography
+          sx={{
+            fontSize: { 'iphone-5-SE': '1.4rem', lg: '4rem' },
+            textAlign: 'center',
+            color: '#FFF',
+            alignItems: 'center',
+            fontWeight: 'bold',
+            position: 'absolute',
+          }}
+        >
+          NOSSA FROTA
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          backgroundColor: '#ECF0F1',
+          backgroundImage: `url(/bgReto.png)`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        }}
+      >
         {!showAdvancedMode ? (
           <>
             <Box
               sx={{
-                kheight: {"iphone-5-SE": ""},
+                height: { 'iphone-5-SE': '' },
                 padding: '0.8rem',
                 display: 'flex',
                 alignItems: 'center',
@@ -188,11 +182,23 @@ const Frota: React.FC = () => {
               borderRadius: '5px',
               boxShadow: '2px 2px 11px -4px #000000',
               marginRight: '1.2rem',
+              padding: '0 2rem',
               // color: showAdvancedMode ? 'white' : 'black',
             }}
             onClick={() => setShowAdvancedMode(false)}
           >
-            <h4 style={{ color: showAdvancedMode ? '#168D63' : 'white' }}>
+            <img
+              src={showAdvancedMode ? 'busIconGreen.svg' : 'busIcon.svg'}
+              alt="bus"
+              width="90px"
+              style={{ paddingTop: '1.2rem' }}
+            />
+            <h4
+              style={{
+                color: showAdvancedMode ? '#168D63' : 'white',
+                textTransform: 'uppercase',
+              }}
+            >
               Semi rodoviário
             </h4>
           </button>
@@ -202,16 +208,25 @@ const Frota: React.FC = () => {
               border: 'none',
               boxShadow: '2px 2px 11px -4px #000000',
               borderRadius: '5px',
+              padding: '0 2rem',
             }}
             onClick={() => setShowAdvancedMode(true)}
           >
+            <img
+              src={
+                showAdvancedMode
+                  ? 'executivoIconWhite.svg'
+                  : 'executivoIconGreen.svg'
+              }
+              alt="bus"
+              width="90px"
+              style={{ paddingTop: '1.2rem' }}
+            />
             <h4
-              style={{ color: showAdvancedMode ? 'white' : '#168D63' }}
-              // className={
-              //   showAdvancedMode
-              //     ? classes.tabButtoSelected
-              //     : classes.tabButtoNotSelected
-              // }
+              style={{
+                color: showAdvancedMode ? 'white' : '#168D63',
+                textTransform: 'uppercase',
+              }}
             >
               Executivo
             </h4>
@@ -236,7 +251,24 @@ const Frota: React.FC = () => {
             </h4>
           </button> */}
         </div>
-      </section>
+      </Box>
+
+      <Box
+        sx={{ width: '100%', backgroundColor: 'white', textAlign: 'center' }}
+      >
+        <Typography
+          sx={{
+            fontSize: { 'iphone-5-SE': '1.4rem', lg: '2.4rem' },
+            color: '#168D63',
+            fontFamily: 'Oswald',
+            p: '0.8rem',
+            fontWeight: 'lighter',
+          }}
+        >
+          Viaje com o conforto que você merece! Viaje sem se preocupar.
+        </Typography>
+      </Box>
+
       <Box
         sx={{
           height: { lg: '100vh', 'iphone-5-SE': '50vh' },
@@ -263,55 +295,28 @@ const Frota: React.FC = () => {
           Frota terceirizada é mais economia e eficiência para sua empresa
         </Typography>
       </Box>
-      <section
-        style={{
-          backgroundColor: '#FFF',
-          flexDirection: 'column',
-          // paddingLeft: '4rem',
-          // paddingRight: '4rem',
-          // paddingTop: '4rem',
-          height: '100%',
-        }}
-      >
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            minWidth: 300,
-            width: '100%',
-            height: '100%',
-          }}
+      <Box sx={{ height: '100%', p: '2.4rem' }}>
+        <ImageList
+          // sx={{ width: 500, height: 450 }}
+          variant="quilted"
+          cols={4}
+          // rowHeight={121}
         >
-          {images.map((image) => (
-            <ImageButton
-              focusRipple
-              key={image.title}
-              style={{
-                width: image.width,
-              }}
+          {itemData.map((item) => (
+            <ImageListItem
+              key={item.img}
+              cols={item.cols || 1}
+              rows={item.rows || 1}
             >
-              <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
-              <ImageBackdrop className="MuiImageBackdrop-root" />
-              <Image>
-                <Typography
-                  component="span"
-                  variant="subtitle1"
-                  color="inherit"
-                  sx={{
-                    position: 'relative',
-                    p: 4,
-                    pt: 2,
-                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-                  }}
-                >
-                  {image.title}
-                  <ImageMarked className="MuiImageMarked-root" />
-                </Typography>
-              </Image>
-            </ImageButton>
+              <img
+                {...srcset(item.img, 121, item.rows, item.cols)}
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
           ))}
-        </Box>
-      </section>
+        </ImageList>
+      </Box>
     </>
   );
 };

@@ -13,6 +13,8 @@ export const CardExecutivoComponent: React.FC = () => {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: { 'iphone-5-SE': 'column', lg: 'row' },
+        boxShadow: 'none',
+        backgroundColor: 'transparent',
       }}
     >
       <CardMedia
@@ -70,8 +72,6 @@ export const CardExecutivoComponent: React.FC = () => {
           poltronas reclináveis
           <br />
           assento duplo
-          <br />
-          Entrada de USB Individual
           <br />
           GESTÃO DE SEGUROS E SINISTROS
           <br />

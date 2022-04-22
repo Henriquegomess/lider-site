@@ -15,28 +15,44 @@ const Infra: React.FC = () => {
           backgroundSize: 'cover',
         }}
       ></Box>
-      <section
-        style={{
+      <Box
+        sx={{
           height: '100%',
           backgroundImage: 'linear-gradient(to right, #095134, #168D63)',
-          padding: '0.8rem',
+          padding: { 'iphone-5-SE': '0.8rem', lg: '0.2rem' },
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         <Typography
           sx={{
-            fontSize: { 'iphone-5-SE': '1.4rem', lg: '2.4rem' },
-            textAlign: 'center',
+            fontSize: { 'iphone-5-SE': '2.4rem', lg: '6.4rem' },
             color: '#FFF',
-            alignItems: 'center',
             fontWeight: 'bold',
+            WebkitTextFillColor: 'transparent',
+            WebkitTextStroke: '1px white',
+            opacity: 0.15,
           }}
         >
           INFRAESTRUTURA
         </Typography>
-      </section>
+        <Typography
+          sx={{
+            fontSize: { 'iphone-5-SE': '1.4rem', lg: '4rem' },
+            textAlign: 'center',
+            color: '#FFF',
+            alignItems: 'center',
+            fontWeight: 'bold',
+            position: 'absolute',
+          }}
+        >
+          INFRAESTRUTURA
+        </Typography>
+      </Box>
       <Box
         sx={{
-          height: '90vh',
+          height: { 'iphone-5-SE': '100vh', lg: '90vh' },
           padding: '0.8rem',
           backgroundColor: '#ECF0F1',
           backgroundImage: `url(/bg1.png)`,

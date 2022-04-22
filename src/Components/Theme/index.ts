@@ -31,7 +31,13 @@ export const LiderTheme = () =>
   createTheme({
     ...theme,
     typography: {
-      fontFamily: ["Open Sans", "Poppins", "sans-serif"].join(","),
+      fontFamily: [
+        'Open Sans',
+        'Poppins',
+        'sans-serif',
+        'Red Rose',
+        'Oswald',
+      ].join(','),
       htmlFontSize: 10,
     },
   });

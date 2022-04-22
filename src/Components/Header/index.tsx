@@ -117,7 +117,11 @@ export const Header: React.FC = () => {
                   component={Link}
                   to={routesConfig.HOME}
                   selected={location.pathname === routesConfig.HOME}
-                  style={{ color: '#168D63', textTransform: 'none' }}
+                  style={{
+                    color: '#168D63',
+                    textTransform: 'none',
+                    fontFamily: 'Red Rose',
+                  }}
                 >
                   Home
                 </ListItem>

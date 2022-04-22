@@ -20,15 +20,19 @@ export const CardWithImageComponent: React.FC = () => {
         height="400"
         image="imagem3.png"
         alt="green iguana"
-        sx={{ height: { 'iphone-5-SE': 170, lg: 400 } }}
+        sx={{
+          height: { 'iphone-5-SE': 170, lg: 400 },
+          width: { 'iphone-5-SE': 170, lg: 360 },
+        }}
       />
-      <CardContent>
+      <CardContent sx={{ p: '2.4rem' }}>
         <Typography
           sx={{
             color: '#168D63',
             fontSize: '2rem',
             fontWeight: 'bold',
-            textAlign: { 'iphone-5-SE': 'center', lg: 'left' },
+            textAlign: { 'iphone-5-SE': 'center', lg: 'center' },
+            fontFamily: 'Oswald',
           }}
         >
           NOSSA HISTÓRIA
@@ -38,11 +42,12 @@ export const CardWithImageComponent: React.FC = () => {
           sx={{
             maxWidth: 560,
             backgroundColor: '#168D63',
+            opacity: 0.5,
           }}
         />
         <Typography
           color="text.secondary"
-          style={{ fontSize: '1rem', paddingTop: '1.2rem' }}
+          sx={{ fontSize: '1rem', paddingTop: '1.2rem' }}
         >
           Morbi tempus felis turpis odio. Purus cras adipiscing eu ultrices
           lobortis. Proin consectetur risus fermentum facilisis nisl. Amet diam
