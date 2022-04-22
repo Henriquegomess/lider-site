@@ -220,6 +220,7 @@ const Home: React.FC = () => {
             fontSize: '4rem',
             pr: '4rem',
             pl: '4rem',
+            fontFamily: 'Oswald',
           }}
         >
           QUEM SOMOS

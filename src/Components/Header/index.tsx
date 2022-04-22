@@ -75,7 +75,7 @@ export const Header: React.FC = () => {
                     component={Link}
                     to={routesConfig.HOME}
                     selected={location.pathname === routesConfig.HOME}
-                    style={{ color: '#168D63' }}
+                    style={{ color: '#168D63', fontFamily: 'Red Rose' }}
                   >
                     Home
                   </ListItem>
@@ -87,7 +87,7 @@ export const Header: React.FC = () => {
                     component={Link}
                     to={routesConfig.INFRA}
                     selected={location.pathname === routesConfig.INFRA}
-                    style={{ color: '#168D63' }}
+                    style={{ color: '#168D63', fontFamily: 'Red Rose' }}
                   >
                     Infraestrutura
                   </ListItem>
@@ -99,7 +99,7 @@ export const Header: React.FC = () => {
                     component={Link}
                     to={routesConfig.FROTA}
                     selected={location.pathname === routesConfig.FROTA}
-                    style={{ color: '#168D63' }}
+                    style={{ color: '#168D63', fontFamily: 'Red Rose' }}
                   >
                     Frota
                   </ListItem>
@@ -136,7 +136,11 @@ export const Header: React.FC = () => {
                   component={Link}
                   to={routesConfig.INFRA}
                   selected={location.pathname === routesConfig.INFRA}
-                  style={{ color: '#168D63', textTransform: 'none' }}
+                  style={{
+                    color: '#168D63',
+                    textTransform: 'none',
+                    fontFamily: 'Red Rose',
+                  }}
                 >
                   Infraestrutura
                 </ListItem>
@@ -151,7 +155,11 @@ export const Header: React.FC = () => {
                   component={Link}
                   to={routesConfig.FROTA}
                   selected={location.pathname === routesConfig.FROTA}
-                  style={{ color: '#168D63', textTransform: 'none' }}
+                  style={{
+                    color: '#168D63',
+                    textTransform: 'none',
+                    fontFamily: 'Red Rose',
+                  }}
                 >
                   Frota
                 </ListItem>
