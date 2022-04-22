@@ -428,6 +428,248 @@ const Home: React.FC = () => {
       <Box
         id="servicos"
         sx={{
+          height: { lg: '70vh', 'iphone-5-SE': '100%' },
+          padding: '0.8rem',
+          // backgroundColor: '#FFF',
+          display: 'flex',
+          flexDirection: { lg: 'row', 'iphone-5-SE': 'column' },
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          backgroundImage: `url(/bg_branco.png)`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        }}
+      >
+        <Box>
+          <div></div>
+        </Box>
+        <Box>
+          <Box>
+            <CardGreenComponent />
+          </Box>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              paddingTop: '1.2rem',
+              width: '100%',
+              justifyContent: 'center',
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: '50%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <img
+                  src="custo.png"
+                  alt="onibus"
+                  style={{ width: '30%' }}
+                  loading="lazy"
+                />
+                <Typography
+                  style={{
+                    fontSize: '0.8rem',
+                    color: '#168D63',
+                    textTransform: 'uppercase',
+                    textAlign: 'center',
+                    paddingBottom: '1.2rem',
+                    paddingTop: '1rem',
+                  }}
+                >
+                  Custos Menores
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: '50%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <img
+                  src="capital.png"
+                  alt="onibus"
+                  style={{ width: '30%' }}
+                  loading="lazy"
+                />
+                <Typography
+                  style={{
+                    fontSize: '0.8rem',
+                    color: '#168D63',
+                    textTransform: 'uppercase',
+                    textAlign: 'center',
+                    paddingBottom: '1.2rem',
+                    paddingTop: '1rem',
+                  }}
+                >
+                  capital movimentado
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: '50%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <img
+                  src="acompanhamento.png"
+                  alt="onibus"
+                  style={{ width: '30%' }}
+                  loading="lazy"
+                />
+                <Typography
+                  style={{
+                    fontSize: '0.8rem',
+                    color: '#168D63',
+                    textTransform: 'uppercase',
+                    textAlign: 'center',
+                    paddingBottom: '1.2rem',
+                    paddingTop: '1rem',
+                  }}
+                >
+                  Acompanhamento em tempo real
+                </Typography>
+              </Box>
+            </div>
+
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: '50%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <img
+                  src="orcamento.png"
+                  alt="onibus"
+                  style={{ width: '30%' }}
+                  loading="lazy"
+                />
+                <Typography
+                  style={{
+                    fontSize: '0.8rem',
+                    color: '#168D63',
+                    textTransform: 'uppercase',
+                    textAlign: 'center',
+                    paddingBottom: '1.2rem',
+                    paddingTop: '1rem',
+                  }}
+                >
+                  Previsibilidade de orçamento
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: '50%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <img
+                  src="monitoramento.png"
+                  alt="onibus"
+                  style={{ width: '30%' }}
+                  loading="lazy"
+                />
+                <Typography
+                  style={{
+                    fontSize: '0.8rem',
+                    color: '#168D63',
+                    textTransform: 'uppercase',
+                    textAlign: 'center',
+                    paddingBottom: '1.2rem',
+                    paddingTop: '1rem',
+                  }}
+                >
+                  Monitoramento
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: '50%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <img
+                  src="like.png"
+                  alt="onibus"
+                  style={{ width: '30%' }}
+                  loading="lazy"
+                />
+                <Typography
+                  style={{
+                    fontSize: '0.8rem',
+                    color: '#168D63',
+                    textTransform: 'uppercase',
+                    textAlign: 'center',
+                    paddingBottom: '1.2rem',
+                    paddingTop: '1rem',
+                  }}
+                >
+                  Ótimo serviço
+                </Typography>
+              </Box>
+            </div>
+          </Box>
+        </Box>
+
+        <Box
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          sx={{ display: 'flex', alignSelf: 'center' }}
+        >
+          <Typography
+            sx={{
+              writingMode: 'vertical-rl',
+              display: { 'iphone-5-SE': 'none', lg: 'flex' },
+              color: '#9F9F9F',
+              opacity: 0.5,
+              fontWeight: 'bold',
+              fontSize: '4rem',
+              fontFamily: 'Oswald',
+            }}
+          >
+            SERVIÇOS
+          </Typography>
+        </Box>
+      </Box>
+
+      {/* <Box
+        id="servicos"
+        sx={{
           height: '100%',
           padding: '0.8rem',
           // backgroundColor: '#FFF',
@@ -443,6 +685,7 @@ const Home: React.FC = () => {
         <Box>
           <div></div>
         </Box>
+
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <CardGreenComponent />
           <div
@@ -609,7 +852,7 @@ const Home: React.FC = () => {
             SERVIÇOS
           </Typography>
         </Box>
-      </Box>
+      </Box> */}
 
       <Box
         data-aos="zoom-in-down"

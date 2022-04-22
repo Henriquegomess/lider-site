@@ -26,13 +26,12 @@ export const Header: React.FC = () => {
 
   return (
     <AppBar position="sticky" style={{ backgroundColor: '#FFF' }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ p: 0, m: 0 }}>
         <Toolbar>
           <IconButton
-            size="large"
             edge="start"
             aria-label="menu"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ display: { xs: 'none', md: 'flex' } }}
             component={Link}
             to={routesConfig.HOME}
           >
@@ -110,7 +109,7 @@ export const Header: React.FC = () => {
           <Box sx={{ flexGrow: 3, display: { xs: 'none', md: 'flex' } }}>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ color: '#168D63', display: 'block', mr: 4 }}
+              sx={{ color: '#168D63', display: 'block' }}
             >
               <List>
                 <ListItem
@@ -130,7 +129,89 @@ export const Header: React.FC = () => {
             </Button>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ color: '#168D63', display: 'block', mr: 4 }}
+              sx={{ color: '#168D63', display: 'block' }}
+            >
+              <List>
+                <ListItem
+                  // component={Link}
+                  // to={routesConfig.HOME}
+                  // selected={location.pathname === routesConfig.HOME}
+                  style={{
+                    color: 'gray',
+                    textTransform: 'none',
+                    fontFamily: 'Red Rose',
+                    fontSize: '1.2rem',
+                  }}
+                >
+                  <a
+                    href="#sobre"
+                    style={{
+                      color: 'gray',
+                      textTransform: 'none',
+                      fontFamily: 'Red Rose',
+                      fontSize: '1.2rem',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Quem somos
+                  </a>
+                </ListItem>
+              </List>
+            </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ color: '#168D63', display: 'block' }}
+            >
+              <List>
+                <ListItem
+                  component={Link}
+                  to={routesConfig.FROTA}
+                  selected={location.pathname === routesConfig.FROTA}
+                  style={{
+                    color: '#168D63',
+                    textTransform: 'none',
+                    fontFamily: 'Red Rose',
+                    fontSize: '1.2rem',
+                  }}
+                >
+                  Nossa Frota
+                </ListItem>
+              </List>
+            </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ color: '#168D63', display: 'block', mr: 0.5 }}
+            >
+              <List>
+                <ListItem
+                  // component={Link}
+                  // to={routesConfig.HOME}
+                  // selected={location.pathname === routesConfig.HOME}
+                  style={{
+                    color: 'gray',
+                    textTransform: 'none',
+                    fontFamily: 'Red Rose',
+                    fontSize: '1.2rem',
+                  }}
+                >
+                  <a
+                    href="#servicos"
+                    style={{
+                      color: 'gray',
+                      textTransform: 'none',
+                      fontFamily: 'Red Rose',
+                      fontSize: '1.2rem',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Serviços
+                  </a>
+                </ListItem>
+              </List>
+            </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ color: '#168D63', display: 'block', mr: 0.5 }}
             >
               <List>
                 <ListItem
@@ -150,21 +231,32 @@ export const Header: React.FC = () => {
             </Button>
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ color: '#168D63', display: 'block', mr: 4 }}
+              sx={{ color: '#168D63', display: 'block', mr: 0.5 }}
             >
               <List>
                 <ListItem
-                  component={Link}
-                  to={routesConfig.FROTA}
-                  selected={location.pathname === routesConfig.FROTA}
+                  // component={Link}
+                  // to={routesConfig.HOME}
+                  // selected={location.pathname === routesConfig.HOME}
                   style={{
-                    color: '#168D63',
+                    color: 'gray',
                     textTransform: 'none',
                     fontFamily: 'Red Rose',
                     fontSize: '1.2rem',
                   }}
                 >
-                  Frota
+                  <a
+                    href="#historia"
+                    style={{
+                      color: 'gray',
+                      textTransform: 'none',
+                      fontFamily: 'Red Rose',
+                      fontSize: '1.2rem',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Nossa História
+                  </a>
                 </ListItem>
               </List>
             </Button>
