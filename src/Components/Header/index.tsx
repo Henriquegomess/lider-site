@@ -121,6 +121,7 @@ export const Header: React.FC = () => {
                     color: '#168D63',
                     textTransform: 'none',
                     fontFamily: 'Red Rose',
+                    fontSize: '1.2rem',
                   }}
                 >
                   Home
@@ -140,6 +141,7 @@ export const Header: React.FC = () => {
                     color: '#168D63',
                     textTransform: 'none',
                     fontFamily: 'Red Rose',
+                    fontSize: '1.2rem',
                   }}
                 >
                   Infraestrutura
@@ -159,6 +161,7 @@ export const Header: React.FC = () => {
                     color: '#168D63',
                     textTransform: 'none',
                     fontFamily: 'Red Rose',
+                    fontSize: '1.2rem',
                   }}
                 >
                   Frota

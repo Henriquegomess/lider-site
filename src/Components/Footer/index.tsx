@@ -16,6 +16,7 @@ const Footer: React.FC = () => {
           fontSize: '2rem',
           fontWeight: 'bold',
           textAlign: 'right',
+          fontFamily: 'Oswald',
         }}
       >
         MATRIZ
@@ -33,27 +34,31 @@ const Footer: React.FC = () => {
           textAlign: 'right',
           textTransform: 'uppercase',
           paddingTop: '1.2rem',
+          fontFamily: 'Oswald',
         }}
       >
-        Ruas Caraubas 16, Manaus - AM, 69098-060
+        Av. Comendador José Cruz, 1950 - Lago Azul, Manaus - AM, 69018-50
       </Typography>
       <Typography
         style={{
           fontSize: '0.8rem',
           textAlign: 'right',
           textTransform: 'uppercase',
+          fontFamily: 'Oswald',
+          fontWeight: 'normal',
         }}
       >
-        (92) 33047736
+        (92) 3223-7222
       </Typography>
       <Typography
         style={{
           fontSize: '0.8rem',
           textAlign: 'right',
           textTransform: 'uppercase',
+          fontFamily: 'Oswald',
         }}
       >
-        Contato@liderransportes.com.br
+        fretamento@lidermanaus.com.br
       </Typography>
       <div
         style={{
@@ -83,7 +88,13 @@ const Footer: React.FC = () => {
           <img src="wpp.png" alt="WhatsApp" />
         </a>
       </div>
-      <Typography style={{ fontSize: '0.6rem', textAlign: 'center' }}>
+      <Typography
+        style={{
+          fontSize: '0.6rem',
+          textAlign: 'center',
+          fontFamily: 'Oswald',
+        }}
+      >
         © 2022. Amazon Lider. Todos direitos reservados.
       </Typography>
     </section>

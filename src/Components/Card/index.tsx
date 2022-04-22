@@ -9,7 +9,7 @@ export const CardComponent: React.FC = () => {
   return (
     <Card
       sx={{
-        maxWidth: 345,
+        maxWidth: 445,
         marginTop: '1.4rem',
         display: 'flex',
         justifyContent: 'center',

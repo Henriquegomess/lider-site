@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/iframe-has-title */
-import { Box, Button, Divider, TextField, Typography } from '@mui/material';
+import { Box, Button, Divider, Input, Typography } from '@mui/material';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import React from 'react';
@@ -38,6 +38,7 @@ const Home: React.FC = () => {
         </svg>
       </a>
       <Box
+        id="home"
         sx={{
           width: '100%',
           height: { lg: '90vh' },
@@ -82,6 +83,7 @@ const Home: React.FC = () => {
           </SplideSlide>
         </Splide>
       </Box>
+
       <Box
         sx={{
           width: '100%',
@@ -149,6 +151,7 @@ const Home: React.FC = () => {
       </Box>
 
       <Box
+        id="sobre"
         sx={{
           height: '90vh',
           padding: '0.8rem',
@@ -167,6 +170,8 @@ const Home: React.FC = () => {
             paddingLeft: '2rem',
             paddingRight: '4rem',
           }}
+          data-aos="fade-right"
+          data-aos-duration="1000"
         >
           <Typography
             sx={{
@@ -205,12 +210,16 @@ const Home: React.FC = () => {
         </Box>
 
         <img
+          data-aos="flip-left"
+          data-aos-duration="1000"
           src="imagem3.png"
           alt="Onibus"
           style={{ width: '60%', paddingTop: '2.4rem' }}
           loading="lazy"
         />
         <Typography
+          data-aos="fade-down"
+          data-aos-duration="1000"
           sx={{
             writingMode: 'vertical-rl',
             display: { 'iphone-5-SE': 'none', lg: 'flex' },
@@ -228,6 +237,8 @@ const Home: React.FC = () => {
       </Box>
 
       <Box
+        data-aos="zoom-in"
+        data-aos-duration="1000"
         sx={{
           height: '100%',
           padding: { 'iphone-5-SE': '0.8rem', lg: '2rem' },
@@ -247,36 +258,31 @@ const Home: React.FC = () => {
         </Typography>
       </Box>
 
-      <section
-        style={{
-          height: '100%',
-          padding: '0.8rem',
+      <Box
+        sx={{
+          height: { 'iphone-5-SE': '100%', lg: '100vh' },
+          padding: { lg: '0.8rem', 'iphone-5-SE': 0 },
           backgroundColor: '#ECF0F1',
           backgroundImage: `url(/bg.png)`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           display: 'flex',
-          flexDirection: 'row',
+          flexDirection: { 'iphone-5-SE': 'column', lg: 'row' },
+          alignItems: 'center',
+          justifyContent: 'space-evenly',
+          width: '100%',
         }}
       >
-        {/* <h1>Nossa frota</h1> */}
-        <Box
-          sx={{
-            display: { 'iphone-5-SE': 'none', lg: 'flex' },
-            paddingRight: '8rem',
-          }}
-        >
+        <Box data-aos="fade-right" data-aos-duration="1000">
           <Typography
             sx={{
-              // paddingRight: '5.6rem',
-              // paddingLeft: '1rem',
-              transform: `rotate(90deg)`,
+              writingMode: 'vertical-rl',
               display: { 'iphone-5-SE': 'none', lg: 'flex' },
               color: '#9F9F9F',
               opacity: 0.5,
               fontWeight: 'bold',
               fontSize: '4rem',
-              // width: '100%',
+              fontFamily: 'Oswald',
             }}
           >
             NOSSA FROTA
@@ -284,17 +290,65 @@ const Home: React.FC = () => {
         </Box>
         <Box
           sx={{
+            display: { lg: 'flex', 'iphone-5-SE': 'none' },
+            flexDirection: { lg: 'column', sm: 'row' },
+            maxWidth: '400px',
+            // justifyContent: 'space-between',
+            // alignItems: 'center',
+          }}
+        >
+          <img
+            data-aos="zoom-out-up"
+            data-aos-duration="1000"
+            src="imagem5.png"
+            alt="onibus"
+            style={{
+              width: '100%',
+              marginBottom: '1.6rem',
+              borderRadius: '10px',
+              boxShadow: ' 5px 5px 32px 5px rgba(0,0,0,0.3)',
+            }}
+          />
+          <img
+            data-aos="zoom-out-up"
+            data-aos-duration="1000"
+            src="imagem3.png"
+            alt="onibus"
+            style={{
+              width: '100%',
+              marginBottom: '1.6rem',
+              borderRadius: '10px',
+              boxShadow: ' 5px 5px 32px 5px rgba(0,0,0,0.3)',
+            }}
+          />
+          <img
+            data-aos="zoom-out-up"
+            data-aos-duration="1000"
+            src="slide2.png"
+            alt="onibus"
+            style={{
+              width: '100%',
+              marginBottom: '1.6rem',
+              borderRadius: '10px',
+              boxShadow: ' 5px 5px 32px 5px rgba(0,0,0,0.3)',
+            }}
+          />
+        </Box>
+        <Box
+          sx={{
             display: 'flex',
             flexDirection: 'column',
+            p: '4rem',
           }}
         >
           <Typography
-            style={{
+            sx={{
               textAlign: 'left',
               color: '#168D63',
-              fontSize: '1.8rem',
+              fontSize: { lg: '2.4rem', 'iphone-5-SE': '1.8rem' },
               fontWeight: 'bold',
               paddingTop: '2rem',
+              fontFamily: 'Oswald',
             }}
           >
             EXPERIÊNCIA INCRÍVEL
@@ -312,6 +366,7 @@ const Home: React.FC = () => {
           <Divider variant="fullWidth" />
 
           <div
+            data-aos="flip-right"
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -322,22 +377,56 @@ const Home: React.FC = () => {
             <CardComponent />
           </div>
         </Box>
-        {/* <Box
+        <Box
           sx={{
-            display: 'flex',
+            display: { lg: 'flex', 'iphone-5-SE': 'none' },
             flexDirection: { lg: 'column', sm: 'row' },
+            maxWidth: '400px',
             // justifyContent: 'space-between',
-            paddingTop: '1.2rem',
-            alignItems: 'center',
+            // alignItems: 'center',
           }}
         >
-          <img src="imagem5.png" alt="onibus" style={{ width: '20%' }} />
-          <img src="imagem3.png" alt="onibus" style={{ width: '20%' }} />
-          <img src="slide2.png" alt="onibus" style={{ width: '20%' }} />
-        </Box> */}
-      </section>
+          <img
+            data-aos="zoom-out-down"
+            data-aos-duration="1000"
+            src="imagem5.png"
+            alt="onibus"
+            style={{
+              width: '100%',
+              marginBottom: '1.6rem',
+              borderRadius: '10px',
+              boxShadow: ' 5px 5px 32px 5px rgba(0,0,0,0.3)',
+            }}
+          />
+          <img
+            data-aos="zoom-out-down"
+            data-aos-duration="1000"
+            src="imagem3.png"
+            alt="onibus"
+            style={{
+              width: '100%',
+              marginBottom: '1.6rem',
+              borderRadius: '10px',
+              boxShadow: ' 5px 5px 32px 5px rgba(0,0,0,0.3)',
+            }}
+          />
+          <img
+            data-aos="zoom-out-down"
+            data-aos-duration="1000"
+            src="slide2.png"
+            alt="onibus"
+            style={{
+              width: '100%',
+              marginBottom: '1.6rem',
+              borderRadius: '10px',
+              boxShadow: ' 5px 5px 32px 5px rgba(0,0,0,0.3)',
+            }}
+          />
+        </Box>
+      </Box>
 
       <Box
+        id="servicos"
         sx={{
           height: '100%',
           padding: '0.8rem',
@@ -520,13 +609,14 @@ const Home: React.FC = () => {
             SERVIÇOS
           </Typography>
         </Box>
-
-        {/* <h1>Serviços</h1> */}
       </Box>
 
-      <section
-        style={{
-          height: '90vh',
+      <Box
+        data-aos="zoom-in-down"
+        data-aos-duration="1000"
+        id="historia"
+        sx={{
+          height: { lg: '70vh', 'iphone-5-SE': '100%' },
           padding: '0.8rem',
           backgroundColor: '#ECF0F1',
           display: 'flex',
@@ -540,10 +630,14 @@ const Home: React.FC = () => {
       >
         {/* <h1>Nossa História</h1> */}
         <CardWithImageComponent />
-      </section>
+      </Box>
 
-      <Box sx={{ height: { 'iphone-5-SE': '50vh', lg: '80vh' } }}>
-        {/* <h1>Mapa</h1> */}
+      <Box
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        sx={{ height: { 'iphone-5-SE': '50vh', lg: '80vh' } }}
+      >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1992.0861817976404!2d-59.978129!3d-3.048464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xab2fbbd0fc087e32!2sAuto%20onibus%20lider!5e0!3m2!1spt-BR!2sbr!4v1640270546881!5m2!1spt-BR!2sbr"
           width="100%"
@@ -554,77 +648,94 @@ const Home: React.FC = () => {
       </Box>
 
       <Box
+        id="trabalhe"
         sx={{
           height: '100%',
           padding: '0.8rem',
           backgroundColor: '#ECF0F1',
+          display: 'flex',
+          flexDirection: { 'iphone-5-SE': 'column', lg: 'row' },
+          justifyContent: { lg: 'space-between' },
         }}
       >
-        <Typography
+        <Box
+          data-aos="fade-up"
+          data-aos-duration="1000"
           sx={{
-            color: '#168D63',
-            fontSize: '2rem',
-            fontWeight: 'bold',
-            textAlign: 'left',
-            fontFamily: 'Oswald',
+            display: 'flex',
+            flexDirection: 'column',
+            alignSelf: 'center',
+            p: { lg: '5.6rem', 'iphone-5-SE': 0 },
           }}
         >
-          TRABALHE CONOSCO
-        </Typography>
-        <Divider
-          variant="fullWidth"
-          sx={{
-            maxWidth: 560,
-            backgroundColor: '#168D63',
-            marginBottom: '1.2rem',
-          }}
-        />
-        <Typography style={{ fontSize: '1rem', color: '#767478' }}>
-          Envie seu curriculum para nosso setor de RH para analise. Assim que
-          tivermos vaga disponível entraremos em contato.
-        </Typography>
+          <Typography
+            sx={{
+              color: '#168D63',
+              fontSize: { lg: '2.4rem', 'iphone-5-SE': '2rem' },
+              fontWeight: 'bold',
+              textAlign: 'left',
+              fontFamily: 'Oswald',
+            }}
+          >
+            TRABALHE CONOSCO
+          </Typography>
+          <Divider
+            variant="fullWidth"
+            sx={{
+              maxWidth: 560,
+              backgroundColor: '#168D63',
+              marginBottom: '1.2rem',
+            }}
+          />
+          <Typography style={{ fontSize: '1rem', color: '#767478' }}>
+            Envie seu curriculum para nosso setor de RH para analise. Assim que
+            tivermos vaga disponível entraremos em contato.
+          </Typography>
+        </Box>
+
         <Box
-        // sx={{
-        //   '& > :not(style)': { m: 1, width: '100%' },
-        //   display: 'flex',
-        //   flexDirection: 'column',
-        // }}
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            p: { lg: '4rem', 'iphone-5-SE': 0 },
+          }}
         >
           <form
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-            }}
             action="https://formspree.io/f/xvodyjob"
             method="POST"
             // encType="multipart/form-data"
           >
-            <TextField
-              id="outlined-basic"
-              label="Nome Completo"
-              variant="outlined"
+            <Input
+              // label="Nome Completo"
+              // variant="outlined"
+              placeholder="Digite seu nome completo"
               name="Nome completo:"
-              style={{
-                fontSize: '1.2rem',
+              fullWidth
+              sx={{
                 marginBottom: '1.2rem',
                 marginTop: '1.2rem',
+                fontSize: '1.2rem',
               }}
             />
-            <TextField
-              id="outlined-basic"
-              label="Seu email:"
-              variant="outlined"
+            <Input
+              // label="Seu email:"
+              // variant="outlined"
+              placeholder="Digite seu email"
+              fullWidth
               name="Email"
               type="email"
-              sx={{ fontSize: '1.2rem', marginBottom: '1.2rem' }}
+              sx={{ marginBottom: '1.2rem', fontSize: '1.2rem' }}
             />
-            <TextField
-              id="outlined-multiline-static"
+            <Input
               name="Fale um pouco sobre você"
-              label="Fale um pouco sobre você"
+              // label="Fale um pouco sobre você"
+              placeholder="Fale um pouco sobre você"
+              fullWidth
               multiline
               rows={4}
-              sx={{ marginBottom: '1.2rem' }}
+              sx={{ marginBottom: '1.2rem', fontSize: '1.2rem' }}
             />
             <label style={{ fontSize: '1.2rem' }}>
               Envie seu currículo
@@ -642,8 +753,8 @@ const Home: React.FC = () => {
               Enviar
             </Button>
           </form>
+          {/* <Form /> */}
         </Box>
-        {/* <Form /> */}
       </Box>
     </>
   );

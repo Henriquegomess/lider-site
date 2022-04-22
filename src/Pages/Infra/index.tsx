@@ -454,6 +454,96 @@ const Infra: React.FC = () => {
           </Typography>
         </Box>
       </Box>
+
+      <Box
+        sx={{
+          height: { 'iphone-5-SE': '100%', lg: '100vh' },
+          padding: '0.8rem',
+          backgroundColor: '#ECF0F1',
+          backgroundImage: `url(/bgReto.png)`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          display: 'flex',
+          flexDirection: { 'iphone-5-SE': 'column', lg: 'row' },
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Box
+            sx={{
+              width: { 'iphone-5-SE': '100%', lg: '50%' },
+            }}
+          >
+            <ImageList
+              // sx={{ width: 500, height: 450 }}
+              variant="quilted"
+              cols={5}
+              // rowHeight={121}
+            >
+              {itemData.map((item) => (
+                <ImageListItem
+                  key={item.img}
+                  cols={item.cols || 1}
+                  rows={item.rows || 1}
+                >
+                  <img
+                    {...srcset(item.img, 121, item.rows, item.cols)}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          </Box>
+
+          <Typography
+            sx={{
+              fontSize: { 'iphone-5-SE': '1rem', lg: '1.2rem' },
+              padding: { 'iphone-5-SE': '0.4rem', lg: '0 8rem' },
+              color: '#747678',
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id eu
+            lacus, potenti at velit dignissim sit et porttitor. Libero molestie
+            consectetur adipiscing mattis ullamcorper. Pellentesque vitae orci
+            aenean massa. Eu laoreet tristique dignissim donec. Quam nunc mattis
+            morbi auctor hendrerit luctus. Est rhoncus et enim scelerisque purus
+            vulputate pulvinar pretium venenatis. Est donec diam amet magna
+            tristique risus lectus. Elit tincidunt ornare pellentesque at.
+            Aliquam tincidunt gravida vehicula pellentesque. Proin eu euismod mi
+            eleifend faucibus cum praesent quis. Donec leo posuere eleifend
+            tincidunt tincidunt. Amet, nibh libero fames in a odio. Morbi amet
+            egestas malesuada venenatis nul
+          </Typography>
+        </Box>
+
+        <Box>
+          <Typography
+            sx={{
+              writingMode: 'vertical-rl',
+              display: { 'iphone-5-SE': 'none', lg: 'flex' },
+              color: '#9F9F9F',
+              opacity: 0.5,
+              fontWeight: 'bold',
+              fontSize: '4rem',
+              pr: '4rem',
+              pl: '4rem',
+              fontFamily: 'Oswald',
+            }}
+          >
+            CONSERVAÇÃO
+          </Typography>
+        </Box>
+      </Box>
     </>
   );
 };
