@@ -19,7 +19,7 @@ export const CardGreenComponent: React.FC = () => {
           <Grid item>
             <ul
               style={{
-                fontSize: '1rem',
+                fontSize: '1.6rem',
                 textTransform: 'uppercase',
                 margin: 0,
                 fontFamily: 'Roboto Condensed',
@@ -32,7 +32,7 @@ export const CardGreenComponent: React.FC = () => {
           <Grid item>
             <ul
               style={{
-                fontSize: '1rem',
+                fontSize: '1.6rem',
                 textTransform: 'uppercase',
                 margin: 0,
                 fontFamily: 'Roboto Condensed',
@@ -45,7 +45,7 @@ export const CardGreenComponent: React.FC = () => {
           <Grid item>
             <ul
               style={{
-                fontSize: '1rem',
+                fontSize: '1.6rem',
                 textTransform: 'uppercase',
                 margin: 0,
                 fontFamily: 'Roboto Condensed',

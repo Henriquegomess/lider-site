@@ -7,7 +7,6 @@ import '@splidejs/splide/dist/css/splide.min.css';
 import React from 'react';
 import { CardComponent } from '../../Components/Card';
 import { CardGreenComponent } from '../../Components/CardGreen';
-import { CardWithImageComponent } from '../../Components/CardWithImage';
 import { Header } from '../../Components/Header';
 
 const Home: React.FC = () => {
@@ -15,7 +14,7 @@ const Home: React.FC = () => {
     <>
       <Header />
       <a
-        href="https://api.whatsapp.com/send?phone=5519999999999&text=Texto%20aqui"
+        href="https://api.whatsapp.com/send?phone=92988422072&text=Texto%20aqui"
         target="_blank"
         style={{ position: 'fixed', bottom: '20px', right: '30px' }}
       >
@@ -139,7 +138,7 @@ const Home: React.FC = () => {
       >
         <Typography
           style={{
-            fontSize: '1rem',
+            fontSize: '1.4rem',
             textAlign: 'center',
             color: '#FFF',
             alignItems: 'center',
@@ -214,7 +213,10 @@ const Home: React.FC = () => {
           data-aos-duration="1000"
           src="imagem3.png"
           alt="Onibus"
-          style={{ width: '50%', paddingTop: '2.4rem' }}
+          style={{
+            width: '50%',
+            paddingTop: '2.4rem',
+          }}
           loading="lazy"
         />
         <Typography
@@ -224,9 +226,9 @@ const Home: React.FC = () => {
             writingMode: 'vertical-rl',
             display: { 'iphone-5-SE': 'none', lg: 'flex' },
             color: '#9F9F9F',
-            opacity: 0.5,
-            fontWeight: 'bold',
-            fontSize: '4rem',
+            opacity: 0.3,
+            fontWeight: 'ligther',
+            fontSize: '5.6rem',
             pr: '4rem',
             pl: '4rem',
             fontFamily: 'Oswald',
@@ -280,8 +282,8 @@ const Home: React.FC = () => {
               display: { 'iphone-5-SE': 'none', lg: 'flex' },
               color: '#9F9F9F',
               opacity: 0.5,
-              fontWeight: 'bold',
-              fontSize: '4rem',
+              fontWeight: 'ligther',
+              fontSize: '5.6rem',
               fontFamily: 'Oswald',
             }}
           >
@@ -482,13 +484,14 @@ const Home: React.FC = () => {
                   loading="lazy"
                 />
                 <Typography
-                  style={{
-                    fontSize: '0.8rem',
+                  sx={{
                     color: '#168D63',
                     textTransform: 'uppercase',
                     textAlign: 'center',
                     paddingBottom: '1.2rem',
                     paddingTop: '1rem',
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: { 'iphone-5-SE': '0.8rem', lg: '1.6rem' },
                   }}
                 >
                   Custos Menores
@@ -510,13 +513,14 @@ const Home: React.FC = () => {
                   loading="lazy"
                 />
                 <Typography
-                  style={{
-                    fontSize: '0.8rem',
+                  sx={{
                     color: '#168D63',
                     textTransform: 'uppercase',
                     textAlign: 'center',
                     paddingBottom: '1.2rem',
                     paddingTop: '1rem',
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: { 'iphone-5-SE': '0.8rem', lg: '1.6rem' },
                   }}
                 >
                   capital movimentado
@@ -538,8 +542,9 @@ const Home: React.FC = () => {
                   loading="lazy"
                 />
                 <Typography
-                  style={{
-                    fontSize: '0.8rem',
+                  sx={{
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: { 'iphone-5-SE': '0.8rem', lg: '1.6rem' },
                     color: '#168D63',
                     textTransform: 'uppercase',
                     textAlign: 'center',
@@ -576,8 +581,9 @@ const Home: React.FC = () => {
                   loading="lazy"
                 />
                 <Typography
-                  style={{
-                    fontSize: '0.8rem',
+                  sx={{
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: { 'iphone-5-SE': '0.8rem', lg: '1.6rem' },
                     color: '#168D63',
                     textTransform: 'uppercase',
                     textAlign: 'center',
@@ -604,8 +610,9 @@ const Home: React.FC = () => {
                   loading="lazy"
                 />
                 <Typography
-                  style={{
-                    fontSize: '0.8rem',
+                  sx={{
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: { 'iphone-5-SE': '0.8rem', lg: '1.6rem' },
                     color: '#168D63',
                     textTransform: 'uppercase',
                     textAlign: 'center',
@@ -632,8 +639,9 @@ const Home: React.FC = () => {
                   loading="lazy"
                 />
                 <Typography
-                  style={{
-                    fontSize: '0.8rem',
+                  sx={{
+                    fontFamily: 'Roboto Condensed',
+                    fontSize: { 'iphone-5-SE': '0.8rem', lg: '1.6rem' },
                     color: '#168D63',
                     textTransform: 'uppercase',
                     textAlign: 'center',
@@ -659,8 +667,8 @@ const Home: React.FC = () => {
               display: { 'iphone-5-SE': 'none', lg: 'flex' },
               color: '#9F9F9F',
               opacity: 0.5,
-              fontWeight: 'bold',
-              fontSize: '4rem',
+              fontWeight: 'ligther',
+              fontSize: '5.6rem',
               fontFamily: 'Oswald',
             }}
           >
@@ -856,7 +864,7 @@ const Home: React.FC = () => {
         </Box>
       </Box> */}
 
-      <Box
+      {/* <Box
         data-aos="zoom-in-down"
         data-aos-duration="1000"
         id="historia"
@@ -873,16 +881,10 @@ const Home: React.FC = () => {
           backgroundSize: 'cover',
         }}
       >
-        {/* <h1>Nossa História</h1> */}
         <CardWithImageComponent />
-      </Box>
+      </Box> */}
 
-      <Box
-        data-aos="flip-left"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="1000"
-        sx={{ height: { 'iphone-5-SE': '50vh', lg: '80vh' } }}
-      >
+      <Box sx={{ height: { 'iphone-5-SE': '50vh', lg: '80vh' } }}>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1992.0861817976404!2d-59.978129!3d-3.048464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xab2fbbd0fc087e32!2sAuto%20onibus%20lider!5e0!3m2!1spt-BR!2sbr!4v1640270546881!5m2!1spt-BR!2sbr"
           width="100%"

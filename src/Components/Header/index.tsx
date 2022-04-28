@@ -255,7 +255,7 @@ export const Header: React.FC = () => {
                       textDecoration: 'none',
                     }}
                   >
-                    Nossa História
+                    Orçamento
                   </a>
                 </ListItem>
               </List>

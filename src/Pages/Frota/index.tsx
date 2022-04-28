@@ -95,7 +95,7 @@ const Frota: React.FC = () => {
         sx={{
           height: '100%',
           backgroundImage: 'linear-gradient(to right, #095134, #168D63)',
-          padding: { 'iphone-5-SE': '0.8rem', lg: '0.2rem' },
+          padding: { 'iphone-5-SE': '0.8rem', lg: 0 },
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -103,7 +103,7 @@ const Frota: React.FC = () => {
       >
         <Typography
           sx={{
-            fontSize: { 'iphone-5-SE': '2.4rem', lg: '6.4rem' },
+            fontSize: { 'iphone-5-SE': '2.4rem', lg: '8rem' },
             color: '#FFF',
             fontWeight: 'bold',
             WebkitTextFillColor: 'transparent',

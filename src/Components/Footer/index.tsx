@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
           <img src="insta.png" alt="Instagram" />
         </a>
         <a
-          href="https://www.instagram.com/amazon.lider/"
+          href="https://api.whatsapp.com/send?phone=92988422072&text=Texto%20aqui"
           style={{ paddingRight: '1.2rem' }}
         >
           <img src="wpp.png" alt="WhatsApp" />
