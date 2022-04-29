@@ -1,5 +1,5 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { List, ListItem } from '@mui/material';
+import { Input, List, ListItem, Modal, Typography } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -12,9 +12,24 @@ import * as React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { routesConfig } from '../../config/routes';
 
+const style = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  boxShadow: 24,
+  p: 4,
+};
+
 export const Header: React.FC = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const location = useLocation();
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);
@@ -25,8 +40,19 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <AppBar position="sticky" style={{ backgroundColor: '#FFF' }}>
-      <Container maxWidth="xl" sx={{ p: 0, m: 0 }}>
+    <AppBar
+      position="sticky"
+      sx={{
+        backgroundColor: '#FFF',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
+      <Container
+        maxWidth="xl"
+        sx={{ display: 'flex', p: 0, m: 0, justifyContent: 'space-between' }}
+      >
         <Toolbar>
           <IconButton
             edge="start"
@@ -229,7 +255,7 @@ export const Header: React.FC = () => {
                 </ListItem>
               </List>
             </Button>
-            <Button
+            {/* <Button
               onClick={handleCloseNavMenu}
               sx={{ color: '#168D63', display: 'block', mr: 0.5 }}
             >
@@ -259,7 +285,95 @@ export const Header: React.FC = () => {
                   </a>
                 </ListItem>
               </List>
-            </Button>
+            </Button> */}
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Button
+                onClick={handleOpen}
+                sx={{
+                  color: 'gray',
+                  textTransform: 'none',
+                  fontFamily: 'Red Rose',
+                  fontSize: '1.2rem',
+                }}
+              >
+                Orçamento
+              </Button>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Typography
+                    sx={{
+                      color: '#168D63',
+                      fontFamily: 'Oswald',
+                      fontWeight: 'bold',
+                    }}
+                  >
+                    Solicite seu orçamento!
+                  </Typography>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      p: { lg: '1rem', 'iphone-5-SE': 0 },
+                    }}
+                  >
+                    <form
+                      action="https://formspree.io/f/xvodyjob"
+                      method="POST"
+                      // encType="multipart/form-data"
+                    >
+                      <Input
+                        placeholder="Digite seu nome completo"
+                        name="Nome completo:"
+                        fullWidth
+                        sx={{
+                          marginBottom: '1.2rem',
+                          marginTop: '1.2rem',
+                          fontSize: '1.2rem',
+                        }}
+                      />
+                      <Input
+                        placeholder="Digite seu email"
+                        fullWidth
+                        name="Email"
+                        type="email"
+                        sx={{ marginBottom: '1.2rem', fontSize: '1.2rem' }}
+                      />
+                      <Input
+                        placeholder="Digite a data de interesse"
+                        fullWidth
+                        name="Data"
+                        type="date"
+                        sx={{ marginBottom: '1.2rem', fontSize: '1.2rem' }}
+                      />
+                      <Input
+                        name="Fale um pouco do serviço que deseja"
+                        placeholder="Fale um pouco do serviço que deseja"
+                        fullWidth
+                        multiline
+                        rows={4}
+                        sx={{ marginBottom: '1.2rem', fontSize: '1.2rem' }}
+                      />
+                      <Button
+                        type="submit"
+                        sx={{
+                          width: '100%',
+                          backgroundColor: '#168D63',
+                          color: '#FFFFFF',
+                          marginTop: '1.2rem',
+                        }}
+                      >
+                        Solicitar
+                      </Button>
+                    </form>
+                  </Box>
+                </Box>
+              </Modal>
+            </Box>
           </Box>
         </Toolbar>
       </Container>

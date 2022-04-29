@@ -1,6 +1,4 @@
 import { Typography } from '@mui/material';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import { CardExecutivoComponent } from '../../Components/CardExecutivo';
@@ -79,12 +77,13 @@ const itemData = [
 
 const Frota: React.FC = () => {
   const [showAdvancedMode, setShowAdvancedMode] = useState(false);
+
   return (
     <>
       <Header />
       <Box
         sx={{
-          backgroundImage: `url(/slide2.png)`,
+          backgroundImage: `url(/slide2.jpg)`,
           backgroundRepeat: 'no-repeat',
           width: '100%',
           height: { lg: '100vh', 'iphone-5-SE': '42vh' },
@@ -199,7 +198,7 @@ const Frota: React.FC = () => {
                 textTransform: 'uppercase',
               }}
             >
-              Semi rodoviário
+              Ônibus
             </h4>
           </button>
           <button
@@ -228,28 +227,9 @@ const Frota: React.FC = () => {
                 textTransform: 'uppercase',
               }}
             >
-              Executivo
+              MiniBus
             </h4>
           </button>
-          {/* <button
-            style={{
-              backgroundColor: 'transparent',
-              border: 'none',
-              paddingLeft: '1.4rem',
-            }}
-            onClick={() => setShowAdvancedMode(true)}
-          >
-            <h4
-              style={{ color: showAdvancedMode ? 'green' : 'red' }}
-              // className={
-              //   showAdvancedMode
-              //     ? classes.tabButtoSelected
-              //     : classes.tabButtoNotSelected
-              // }
-            >
-              Convencional
-            </h4>
-          </button> */}
         </div>
       </Box>
 
@@ -296,7 +276,7 @@ const Frota: React.FC = () => {
         </Typography>
       </Box>
       <Box sx={{ height: '100%', p: '2.4rem' }}>
-        <ImageList
+        {/* <ImageList
           // sx={{ width: 500, height: 450 }}
           variant="quilted"
           cols={4}
@@ -315,7 +295,7 @@ const Frota: React.FC = () => {
               />
             </ImageListItem>
           ))}
-        </ImageList>
+        </ImageList> */}
       </Box>
     </>
   );

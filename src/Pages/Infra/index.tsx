@@ -1,6 +1,4 @@
 import { Box, Typography } from '@mui/material';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import React from 'react';
 import { Header } from '../../Components/Header';
 
@@ -15,17 +13,17 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
 
 const itemData = [
   {
-    img: '/slide3.png',
+    img: 'slide3.jpg',
     title: 'Breakfast',
     rows: 2,
     cols: 3,
   },
   {
-    img: '/home.png',
+    img: '/home.jpg',
     title: 'Burger',
   },
   {
-    img: '/slide2.png',
+    img: 'slide2.jpg',
     title: 'Camera',
   },
   {
@@ -46,11 +44,11 @@ const itemData = [
     cols: 3,
   },
   {
-    img: '/slide2.png',
+    img: '/slide2.jpg',
     title: 'Basketball',
   },
   {
-    img: '/slide3.png',
+    img: '/slide3.jpg',
     title: 'Fern',
   },
 ];
@@ -61,7 +59,7 @@ const Infra: React.FC = () => {
       <Header />
       <Box
         sx={{
-          backgroundImage: `url(/slide2.png)`,
+          backgroundImage: `url(/slide3.jpg)`,
           backgroundRepeat: 'no-repeat',
           width: '100%',
           height: { lg: '100vh', 'iphone-5-SE': '42vh' },
@@ -131,7 +129,7 @@ const Infra: React.FC = () => {
               width: { 'iphone-5-SE': '100%', lg: '50%' },
             }}
           >
-            <ImageList
+            {/* <ImageList
               // sx={{ width: 500, height: 450 }}
               variant="quilted"
               cols={5}
@@ -150,7 +148,7 @@ const Infra: React.FC = () => {
                   />
                 </ImageListItem>
               ))}
-            </ImageList>
+            </ImageList> */}
           </Box>
 
           <Typography
@@ -181,8 +179,8 @@ const Infra: React.FC = () => {
               display: { 'iphone-5-SE': 'none', lg: 'flex' },
               color: '#9F9F9F',
               opacity: 0.5,
-              fontWeight: 'bold',
-              fontSize: '4rem',
+              fontWeight: 'ligther',
+              fontSize: '5.6rem',
               pr: '4rem',
               pl: '4rem',
               fontFamily: 'Oswald',
@@ -211,8 +209,8 @@ const Infra: React.FC = () => {
               display: { 'iphone-5-SE': 'none', lg: 'flex' },
               color: '#9F9F9F',
               opacity: 0.5,
-              fontWeight: 'bold',
-              fontSize: '4rem',
+              fontWeight: 'ligther',
+              fontSize: '5.6rem',
               pr: '4rem',
               pl: '4rem',
               fontFamily: 'Oswald',
@@ -235,7 +233,7 @@ const Infra: React.FC = () => {
               width: { 'iphone-5-SE': '100%', lg: '50%' },
             }}
           >
-            <ImageList
+            {/* <ImageList
               // sx={{ width: 500, height: 450 }}
               variant="quilted"
               cols={5}
@@ -254,7 +252,7 @@ const Infra: React.FC = () => {
                   />
                 </ImageListItem>
               ))}
-            </ImageList>
+            </ImageList> */}
           </Box>
 
           <Typography
@@ -307,7 +305,7 @@ const Infra: React.FC = () => {
               width: { 'iphone-5-SE': '100%', lg: '50%' },
             }}
           >
-            <ImageList
+            {/* <ImageList
               // sx={{ width: 500, height: 450 }}
               variant="quilted"
               cols={5}
@@ -326,7 +324,7 @@ const Infra: React.FC = () => {
                   />
                 </ImageListItem>
               ))}
-            </ImageList>
+            </ImageList> */}
           </Box>
 
           <Typography
@@ -357,8 +355,8 @@ const Infra: React.FC = () => {
               display: { 'iphone-5-SE': 'none', lg: 'flex' },
               color: '#9F9F9F',
               opacity: 0.5,
-              fontWeight: 'bold',
-              fontSize: '4rem',
+              fontWeight: 'ligther',
+              fontSize: '5.6rem',
               pr: '4rem',
               pl: '4rem',
               fontFamily: 'Oswald',
@@ -387,8 +385,8 @@ const Infra: React.FC = () => {
               display: { 'iphone-5-SE': 'none', lg: 'flex' },
               color: '#9F9F9F',
               opacity: 0.5,
-              fontWeight: 'bold',
-              fontSize: '4rem',
+              fontWeight: 'ligther',
+              fontSize: '5.6rem',
               pr: '4rem',
               pl: '4rem',
               fontFamily: 'Oswald',
@@ -411,7 +409,7 @@ const Infra: React.FC = () => {
               width: { 'iphone-5-SE': '100%', lg: '50%' },
             }}
           >
-            <ImageList
+            {/* <ImageList
               // sx={{ width: 500, height: 450 }}
               variant="quilted"
               cols={5}
@@ -430,7 +428,7 @@ const Infra: React.FC = () => {
                   />
                 </ImageListItem>
               ))}
-            </ImageList>
+            </ImageList> */}
           </Box>
 
           <Typography
@@ -483,7 +481,7 @@ const Infra: React.FC = () => {
               width: { 'iphone-5-SE': '100%', lg: '50%' },
             }}
           >
-            <ImageList
+            {/* <ImageList
               // sx={{ width: 500, height: 450 }}
               variant="quilted"
               cols={5}
@@ -502,7 +500,7 @@ const Infra: React.FC = () => {
                   />
                 </ImageListItem>
               ))}
-            </ImageList>
+            </ImageList> */}
           </Box>
 
           <Typography
@@ -533,8 +531,8 @@ const Infra: React.FC = () => {
               display: { 'iphone-5-SE': 'none', lg: 'flex' },
               color: '#9F9F9F',
               opacity: 0.5,
-              fontWeight: 'bold',
-              fontSize: '4rem',
+              fontWeight: 'ligther',
+              fontSize: '5.6rem',
               pr: '4rem',
               pl: '4rem',
               fontFamily: 'Oswald',

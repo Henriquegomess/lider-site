@@ -13,6 +13,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Header />
+
       <a
         href="https://api.whatsapp.com/send?phone=92988422072&text=Texto%20aqui"
         target="_blank"
@@ -55,7 +56,7 @@ const Home: React.FC = () => {
         >
           <SplideSlide>
             <img
-              src="home.png"
+              src="home.jpg"
               alt="Image 1"
               width="100%"
               height="100%"
@@ -64,7 +65,7 @@ const Home: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="slide2.png"
+              src="slide2.jpg"
               alt="Image 2"
               width="100%"
               height="100%"
@@ -73,7 +74,7 @@ const Home: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="slide3.png"
+              src="slide3.jpg"
               alt="Image 1"
               width="100%"
               height="100%"
@@ -101,7 +102,7 @@ const Home: React.FC = () => {
         >
           <SplideSlide>
             <img
-              src="home.png"
+              src="home.jpg"
               alt="Image 1"
               width="100%"
               height="100%"
@@ -110,7 +111,7 @@ const Home: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="slide2.png"
+              src="slide2.jpg"
               alt="Image 2"
               width="100%"
               height="100%"
@@ -119,7 +120,7 @@ const Home: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="slide3.png"
+              src="slide3.jpg"
               alt="Image 1"
               width="100%"
               height="100%"
@@ -137,8 +138,8 @@ const Home: React.FC = () => {
         }}
       >
         <Typography
-          style={{
-            fontSize: '1.4rem',
+          sx={{
+            fontSize: { lg: '1.4rem', 'iphone-5-SE': '1rem' },
             textAlign: 'center',
             color: '#FFF',
             alignItems: 'center',
@@ -326,7 +327,7 @@ const Home: React.FC = () => {
           <img
             data-aos="zoom-out-up"
             data-aos-duration="1000"
-            src="slide2.png"
+            src="slide2.jpg"
             alt="onibus"
             style={{
               width: '100%',
@@ -415,7 +416,7 @@ const Home: React.FC = () => {
           <img
             data-aos="zoom-out-down"
             data-aos-duration="1000"
-            src="slide2.png"
+            src="slide2.jpg"
             alt="onibus"
             style={{
               width: '100%',
