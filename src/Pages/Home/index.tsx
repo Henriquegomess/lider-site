@@ -303,8 +303,9 @@ const Home: React.FC = () => {
           <img
             data-aos="zoom-out-up"
             data-aos-duration="1000"
-            src="imagem5.png"
+            src="experienciaIncrivel1.jpg"
             alt="onibus"
+            loading="lazy"
             style={{
               width: '100%',
               marginBottom: '1.6rem',
@@ -315,8 +316,9 @@ const Home: React.FC = () => {
           <img
             data-aos="zoom-out-up"
             data-aos-duration="1000"
-            src="imagem3.png"
+            src="experienciaIncrivel2.jpg"
             alt="onibus"
+            loading="lazy"
             style={{
               width: '100%',
               marginBottom: '1.6rem',
@@ -327,8 +329,9 @@ const Home: React.FC = () => {
           <img
             data-aos="zoom-out-up"
             data-aos-duration="1000"
-            src="slide2.jpg"
+            src="experienciaIncrivel3.jpg"
             alt="onibus"
+            loading="lazy"
             style={{
               width: '100%',
               marginBottom: '1.6rem',
@@ -392,8 +395,9 @@ const Home: React.FC = () => {
           <img
             data-aos="zoom-out-down"
             data-aos-duration="1000"
-            src="imagem5.png"
+            src="experienciaIncrivel4.jpg"
             alt="onibus"
+            loading="lazy"
             style={{
               width: '100%',
               marginBottom: '1.6rem',
@@ -404,8 +408,9 @@ const Home: React.FC = () => {
           <img
             data-aos="zoom-out-down"
             data-aos-duration="1000"
-            src="imagem3.png"
+            src="experienciaIncrivel5.jpg"
             alt="onibus"
+            loading="lazy"
             style={{
               width: '100%',
               marginBottom: '1.6rem',
@@ -418,6 +423,7 @@ const Home: React.FC = () => {
             data-aos-duration="1000"
             src="slide2.jpg"
             alt="onibus"
+            loading="lazy"
             style={{
               width: '100%',
               marginBottom: '1.6rem',

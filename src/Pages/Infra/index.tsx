@@ -2,57 +2,6 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import { Header } from '../../Components/Header';
 
-function srcset(image: string, size: number, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  };
-}
-
-const itemData = [
-  {
-    img: 'slide3.jpg',
-    title: 'Breakfast',
-    rows: 2,
-    cols: 3,
-  },
-  {
-    img: '/home.jpg',
-    title: 'Burger',
-  },
-  {
-    img: 'slide2.jpg',
-    title: 'Camera',
-  },
-  {
-    img: '/imagem3.png',
-    title: 'Coffee',
-    cols: 2,
-  },
-  {
-    img: '/frota.png',
-    title: 'Hats',
-    cols: 2,
-  },
-  {
-    img: '/imagem5.png',
-    title: 'Honey',
-    author: '@arwinneil',
-    rows: 2,
-    cols: 3,
-  },
-  {
-    img: '/slide2.jpg',
-    title: 'Basketball',
-  },
-  {
-    img: '/slide3.jpg',
-    title: 'Fern',
-  },
-];
-
 const Infra: React.FC = () => {
   return (
     <>
@@ -126,29 +75,10 @@ const Infra: React.FC = () => {
         >
           <Box
             sx={{
-              width: { 'iphone-5-SE': '100%', lg: '50%' },
+              width: { 'iphone-5-SE': '100%', lg: '80%' },
             }}
           >
-            {/* <ImageList
-              // sx={{ width: 500, height: 450 }}
-              variant="quilted"
-              cols={5}
-              // rowHeight={121}
-            >
-              {itemData.map((item) => (
-                <ImageListItem
-                  key={item.img}
-                  cols={item.cols || 1}
-                  rows={item.rows || 1}
-                >
-                  <img
-                    {...srcset(item.img, 121, item.rows, item.cols)}
-                    alt={item.title}
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList> */}
+            <img src="imgFrotas.png" alt="Garagem" width="100%" height="100%" />
           </Box>
 
           <Typography
@@ -230,29 +160,15 @@ const Infra: React.FC = () => {
         >
           <Box
             sx={{
-              width: { 'iphone-5-SE': '100%', lg: '50%' },
+              width: { 'iphone-5-SE': '100%', lg: '80%' },
             }}
           >
-            {/* <ImageList
-              // sx={{ width: 500, height: 450 }}
-              variant="quilted"
-              cols={5}
-              // rowHeight={121}
-            >
-              {itemData.map((item) => (
-                <ImageListItem
-                  key={item.img}
-                  cols={item.cols || 1}
-                  rows={item.rows || 1}
-                >
-                  <img
-                    {...srcset(item.img, 121, item.rows, item.cols)}
-                    alt={item.title}
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList> */}
+            <img
+              src="manutencao.png"
+              alt="Manutenção"
+              width="100%"
+              height="100%"
+            />
           </Box>
 
           <Typography
@@ -300,32 +216,18 @@ const Infra: React.FC = () => {
             alignItems: 'center',
           }}
         >
-          <Box
+          {/* <Box
             sx={{
-              width: { 'iphone-5-SE': '100%', lg: '50%' },
+              width: { 'iphone-5-SE': '100%', lg: '80%' },
             }}
           >
-            {/* <ImageList
-              // sx={{ width: 500, height: 450 }}
-              variant="quilted"
-              cols={5}
-              // rowHeight={121}
-            >
-              {itemData.map((item) => (
-                <ImageListItem
-                  key={item.img}
-                  cols={item.cols || 1}
-                  rows={item.rows || 1}
-                >
-                  <img
-                    {...srcset(item.img, 121, item.rows, item.cols)}
-                    alt={item.title}
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList> */}
-          </Box>
+            <img
+              src="seguranca.png"
+              alt="Segurança"
+              width="100%"
+              height="100%"
+            />
+          </Box> */}
 
           <Typography
             sx={{
@@ -409,26 +311,12 @@ const Infra: React.FC = () => {
               width: { 'iphone-5-SE': '100%', lg: '50%' },
             }}
           >
-            {/* <ImageList
-              // sx={{ width: 500, height: 450 }}
-              variant="quilted"
-              cols={5}
-              // rowHeight={121}
-            >
-              {itemData.map((item) => (
-                <ImageListItem
-                  key={item.img}
-                  cols={item.cols || 1}
-                  rows={item.rows || 1}
-                >
-                  <img
-                    {...srcset(item.img, 121, item.rows, item.cols)}
-                    alt={item.title}
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList> */}
+            <img
+              src="seguranca.png"
+              alt="Segurança"
+              width="100%"
+              height="100%"
+            />
           </Box>
 
           <Typography
@@ -478,29 +366,10 @@ const Infra: React.FC = () => {
         >
           <Box
             sx={{
-              width: { 'iphone-5-SE': '100%', lg: '50%' },
+              width: { 'iphone-5-SE': '100%', lg: '70%' },
             }}
           >
-            {/* <ImageList
-              // sx={{ width: 500, height: 450 }}
-              variant="quilted"
-              cols={5}
-              // rowHeight={121}
-            >
-              {itemData.map((item) => (
-                <ImageListItem
-                  key={item.img}
-                  cols={item.cols || 1}
-                  rows={item.rows || 1}
-                >
-                  <img
-                    {...srcset(item.img, 121, item.rows, item.cols)}
-                    alt={item.title}
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList> */}
+            <img src="limpeza.png" alt="Limpeza" width="100%" height="100%" />
           </Box>
 
           <Typography

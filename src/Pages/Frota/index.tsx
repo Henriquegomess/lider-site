@@ -5,79 +5,13 @@ import { CardExecutivoComponent } from '../../Components/CardExecutivo';
 import { CardRodoviarioComponent } from '../../Components/CardRodoviario';
 import { Header } from '../../Components/Header';
 
-function srcset(image: string, size: number, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  };
-}
-
-const itemData = [
-  {
-    img: '/slide3.png',
-    title: 'Breakfast',
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: '/home.png',
-    title: 'Burger',
-  },
-  {
-    img: '/slide2.png',
-    title: 'Camera',
-  },
-  {
-    img: '/imagem3.png',
-    title: 'Coffee',
-    cols: 2,
-  },
-  {
-    img: '/frota.png',
-    title: 'Hats',
-    cols: 2,
-  },
-  {
-    img: '/imagem5.png',
-    title: 'Honey',
-    author: '@arwinneil',
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: '/slide2.png',
-    title: 'Basketball',
-  },
-  {
-    img: '/slide3.png',
-    title: 'Fern',
-  },
-  {
-    img: '/imagem5.png',
-    title: 'Mushrooms',
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: '/home.png',
-    title: 'Tomato basil',
-  },
-  {
-    img: '/imagem3.png',
-    title: 'Sea star',
-  },
-  {
-    img: '/slide3.png',
-    title: 'Bike',
-    cols: 2,
-  },
-];
-
 const Frota: React.FC = () => {
   const [showAdvancedMode, setShowAdvancedMode] = useState(false);
+  const [value, setValue] = React.useState(0);
 
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
   return (
     <>
       <Header />
@@ -144,7 +78,7 @@ const Frota: React.FC = () => {
                 justifyContent: 'center',
               }}
             >
-              <CardRodoviarioComponent />
+              <CardExecutivoComponent />
             </Box>
           </>
         ) : (
@@ -158,7 +92,7 @@ const Frota: React.FC = () => {
                 justifyContent: 'center',
               }}
             >
-              <CardExecutivoComponent />
+              <CardRodoviarioComponent />
             </section>
           </>
         )}
@@ -198,7 +132,7 @@ const Frota: React.FC = () => {
                 textTransform: 'uppercase',
               }}
             >
-              Ônibus
+              Minibus
             </h4>
           </button>
           <button
@@ -227,10 +161,19 @@ const Frota: React.FC = () => {
                 textTransform: 'uppercase',
               }}
             >
-              MiniBus
+              Micro-ônibus
             </h4>
           </button>
         </div>
+        {/* <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="icon label tabs example"
+        >
+          <Tab icon={<PhoneIcon />} label="RECENTS" />
+          <Tab icon={<FavoriteIcon />} label="FAVORITES" />
+          <Tab icon={<PersonPinIcon />} label="NEARBY" />
+        </Tabs> */}
       </Box>
 
       <Box
