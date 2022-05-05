@@ -3,7 +3,6 @@ import { Input, List, ListItem, Modal, Typography } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -40,28 +39,31 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <AppBar
-      position="sticky"
-      sx={{
-        backgroundColor: '#FFF',
-        height: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-      }}
-    >
-      <Container
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar
+        position="sticky"
+        sx={{
+          backgroundColor: '#FFF',
+          height: '100%',
+        }}
+      >
+        {/* <Container
         maxWidth="xl"
         sx={{ display: 'flex', p: 0, m: 0, justifyContent: 'space-between' }}
-      >
+      > */}
         <Toolbar>
           <IconButton
             edge="start"
             aria-label="menu"
-            sx={{ display: { xs: 'none', md: 'flex' } }}
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+              mr: '8rem',
+              ml: '12rem',
+            }}
             component={Link}
             to={routesConfig.HOME}
           >
-            <img src="logo-lider.png" alt="logo" width="30%" height="30%" />
+            <img src="lider-logo.png" alt="logo" width="150px" />
           </IconButton>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -132,7 +134,7 @@ export const Header: React.FC = () => {
               </MenuItem>
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 3, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             <Button
               onClick={handleCloseNavMenu}
               sx={{ color: '#168D63', display: 'block' }}
@@ -376,7 +378,8 @@ export const Header: React.FC = () => {
             </Box>
           </Box>
         </Toolbar>
-      </Container>
-    </AppBar>
+        {/* </Container> */}
+      </AppBar>
+    </Box>
   );
 };

@@ -42,6 +42,7 @@ const Frota: React.FC = () => {
             WebkitTextFillColor: 'transparent',
             WebkitTextStroke: '1px white',
             opacity: 0.15,
+            fontFamily: 'Gilory ExtraBold',
           }}
         >
           NOSSA FROTA
@@ -54,6 +55,7 @@ const Frota: React.FC = () => {
             alignItems: 'center',
             fontWeight: 'bold',
             position: 'absolute',
+            fontFamily: 'Gilory ExtraBold',
           }}
         >
           NOSSA FROTA

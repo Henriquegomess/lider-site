@@ -27,12 +27,13 @@ const Infra: React.FC = () => {
       >
         <Typography
           sx={{
-            fontSize: { 'iphone-5-SE': '2.4rem', lg: '6.4rem' },
+            fontSize: { 'iphone-5-SE': '2.4rem', lg: '8rem' },
             color: '#FFF',
             fontWeight: 'bold',
             WebkitTextFillColor: 'transparent',
             WebkitTextStroke: '1px white',
             opacity: 0.15,
+            fontFamily: 'Gilory ExtraBold',
           }}
         >
           INFRAESTRUTURA
@@ -45,6 +46,7 @@ const Infra: React.FC = () => {
             alignItems: 'center',
             fontWeight: 'bold',
             position: 'absolute',
+            fontFamily: 'Gilory ExtraBold',
           }}
         >
           INFRAESTRUTURA
