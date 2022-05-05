@@ -1,5 +1,12 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { Input, List, ListItem, Modal, Typography } from '@mui/material';
+import {
+  Container,
+  Input,
+  List,
+  ListItem,
+  Modal,
+  Typography,
+} from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -39,18 +46,21 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="sticky"
-        sx={{
-          backgroundColor: '#FFF',
-          height: '100%',
-        }}
-      >
-        {/* <Container
+    // <Box sx={{ flexGrow: 1 }}>
+    <AppBar
+      // position="sticky"
+      sx={{
+        backgroundColor: '#FFF',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        position: 'sticky',
+      }}
+    >
+      <Container
         maxWidth="xl"
         sx={{ display: 'flex', p: 0, m: 0, justifyContent: 'space-between' }}
-      > */}
+      >
         <Toolbar>
           <IconButton
             edge="start"
@@ -63,10 +73,10 @@ export const Header: React.FC = () => {
             component={Link}
             to={routesConfig.HOME}
           >
-            <img src="lider-logo.png" alt="logo" width="150px" />
+            <img src="lider-logo.png" alt="logo" width="190px" />
           </IconButton>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 3, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -378,8 +388,8 @@ export const Header: React.FC = () => {
             </Box>
           </Box>
         </Toolbar>
-        {/* </Container> */}
-      </AppBar>
-    </Box>
+      </Container>
+    </AppBar>
+    // </Box>
   );
 };
