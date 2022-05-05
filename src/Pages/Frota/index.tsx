@@ -218,7 +218,15 @@ const Frota: React.FC = () => {
           Frota terceirizada é mais economia e eficiência para sua empresa
         </Typography>
       </Box>
-      <Box sx={{ height: '100%', p: '2.4rem' }}>
+      <Box
+        sx={{
+          height: '100%',
+          p: '2.4rem',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
         {/* <ImageList
           // sx={{ width: 500, height: 450 }}
           variant="quilted"
@@ -239,6 +247,7 @@ const Frota: React.FC = () => {
             </ImageListItem>
           ))}
         </ImageList> */}
+        <img src="Imagens.png" alt="Imagens frota" loading="lazy" />
       </Box>
     </>
   );

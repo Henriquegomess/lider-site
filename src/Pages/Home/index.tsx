@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     <>
       <Header />
 
-      <a
+      {/* <a
         href="https://api.whatsapp.com/send?phone=92988422072&text=Texto%20aqui"
         target="_blank"
         style={{ position: 'fixed', bottom: '20px', right: '30px' }}
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
             fill="#FAFAFA"
           />
         </svg>
-      </a>
+      </a> */}
       <Box
         id="home"
         sx={{
