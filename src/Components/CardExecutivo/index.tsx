@@ -43,7 +43,7 @@ export const CardExecutivoComponent: React.FC = () => {
         >
           <SplideSlide>
             <img
-              src="imagem3.png"
+              src="Minibus.jpg"
               alt="Image 1"
               width="100%"
               height="100%"
@@ -52,7 +52,7 @@ export const CardExecutivoComponent: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="imagem3.png"
+              src="Minibus.jpg"
               alt="Image 2"
               width="100%"
               height="100%"
@@ -61,7 +61,7 @@ export const CardExecutivoComponent: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="imagem3.png"
+              src="Minibus.jpg"
               alt="Image 1"
               width="100%"
               height="100%"

@@ -41,7 +41,7 @@ const Home: React.FC = () => {
         id="home"
         sx={{
           width: '100%',
-          height: { lg: '90vh' },
+          height: { lg: '100%' },
           display: { lg: 'flex', 'iphone-5-SE': 'none' },
         }}
       >
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
           options={{
             rewind: true,
             width: '100%',
-            height: '90vh',
+            height: '100%',
             gap: '1rem',
             autoplay: true,
           }}
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="slide2.jpg"
+              src="teatro.jpg"
               alt="Image 2"
               width="100%"
               height="100%"
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="slide3.jpg"
+              src="frotaHome.png"
               alt="Image 1"
               width="100%"
               height="100%"
@@ -892,13 +892,20 @@ const Home: React.FC = () => {
       </Box> */}
 
       <Box sx={{ height: { 'iphone-5-SE': '50vh', lg: '80vh' } }}>
-        <iframe
+        {/* <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1992.0861817976404!2d-59.978129!3d-3.048464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xab2fbbd0fc087e32!2sAuto%20onibus%20lider!5e0!3m2!1spt-BR!2sbr!4v1640270546881!5m2!1spt-BR!2sbr"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           loading="lazy"
-        />
+        /> */}
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992.230210021768!2d-60.004274745021114!3d-2.9696618309594016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1bfc20d492cf%3A0x52bd9f5757460b76!2sAmazon%20L%C3%ADder%20Transporte%20e%20Turismo%20Ltda.!5e0!3m2!1spt-BR!2sbr!4v1653466560765!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+        ></iframe>
       </Box>
 
       <Box

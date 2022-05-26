@@ -23,10 +23,10 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: '70%',
   bgcolor: 'background.paper',
   boxShadow: 24,
-  p: 4,
+  // p: 4,
 };
 
 export const Header: React.FC = () => {
@@ -53,7 +53,7 @@ export const Header: React.FC = () => {
         backgroundColor: '#FFF',
         height: '100%',
         display: 'flex',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         position: 'sticky',
       }}
     >
@@ -73,7 +73,7 @@ export const Header: React.FC = () => {
             component={Link}
             to={routesConfig.HOME}
           >
-            <img src="lider-logo.png" alt="logo" width="190px" />
+            <img src="/lider-logo.png" alt="logo" width="190px" />
           </IconButton>
 
           <Box sx={{ flexGrow: 3, display: { xs: 'flex', md: 'none' } }}>
@@ -191,7 +191,7 @@ export const Header: React.FC = () => {
                       textDecoration: 'none',
                     }}
                   >
-                    Quem somos
+                    Quem Somos
                   </a>
                 </ListItem>
               </List>
@@ -302,87 +302,143 @@ export const Header: React.FC = () => {
               <Button
                 onClick={handleOpen}
                 sx={{
-                  color: 'gray',
+                  color: 'white',
                   textTransform: 'none',
                   fontFamily: 'Red Rose',
                   fontSize: '1.2rem',
+                  backgroundColor: '#168D63',
+                  borderRadius: 'none',
                 }}
               >
                 Orçamento
               </Button>
-              <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-              >
+              <Modal open={open} onClose={handleClose}>
                 <Box sx={style}>
-                  <Typography
-                    sx={{
-                      color: '#168D63',
-                      fontFamily: 'Oswald',
-                      fontWeight: 'bold',
-                    }}
-                  >
-                    Solicite seu orçamento!
-                  </Typography>
-                  <Box
-                    sx={{
+                  <div
+                    style={{
                       display: 'flex',
-                      flexDirection: 'column',
-                      p: { lg: '1rem', 'iphone-5-SE': 0 },
+                      flexDirection: 'row',
+                      width: '100%',
+                      height: '100%',
                     }}
                   >
-                    <form
-                      action="https://formspree.io/f/xvodyjob"
-                      method="POST"
-                      // encType="multipart/form-data"
+                    <div style={{ width: '50%', height: '100%' }}>
+                      <img src="imagemodal.png" alt="" />
+                    </div>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        width: '50%',
+                        padding: '1.2rem',
+                      }}
                     >
-                      <Input
-                        placeholder="Digite seu nome completo"
-                        name="Nome completo:"
-                        fullWidth
+                      <Typography
                         sx={{
-                          marginBottom: '1.2rem',
-                          marginTop: '1.2rem',
-                          fontSize: '1.2rem',
-                        }}
-                      />
-                      <Input
-                        placeholder="Digite seu email"
-                        fullWidth
-                        name="Email"
-                        type="email"
-                        sx={{ marginBottom: '1.2rem', fontSize: '1.2rem' }}
-                      />
-                      <Input
-                        placeholder="Digite a data de interesse"
-                        fullWidth
-                        name="Data"
-                        type="date"
-                        sx={{ marginBottom: '1.2rem', fontSize: '1.2rem' }}
-                      />
-                      <Input
-                        name="Fale um pouco do serviço que deseja"
-                        placeholder="Fale um pouco do serviço que deseja"
-                        fullWidth
-                        multiline
-                        rows={4}
-                        sx={{ marginBottom: '1.2rem', fontSize: '1.2rem' }}
-                      />
-                      <Button
-                        type="submit"
-                        sx={{
-                          width: '100%',
-                          backgroundColor: '#168D63',
-                          color: '#FFFFFF',
-                          marginTop: '1.2rem',
+                          color: '#168D63',
+                          fontFamily: 'Oswald',
+                          fontWeight: 'bold',
                         }}
                       >
-                        Solicitar
-                      </Button>
-                    </form>
-                  </Box>
+                        Solicite seu orçamento!
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          p: { lg: '1rem', 'iphone-5-SE': 0 },
+                        }}
+                      >
+                        <form
+                          action="https://formspree.io/f/xvodyjob"
+                          method="POST"
+                          // encType="multipart/form-data"
+                        >
+                          <Input
+                            placeholder="Digite seu nome completo"
+                            name="Nome completo:"
+                            fullWidth
+                            sx={{
+                              marginBottom: '1.2rem',
+                              marginTop: '1.2rem',
+                              fontSize: '1.2rem',
+                            }}
+                          />
+                          <Input
+                            placeholder="Digite seu email"
+                            fullWidth
+                            name="Email"
+                            type="email"
+                            sx={{ marginBottom: '1.2rem', fontSize: '1.2rem' }}
+                          />
+                          <Input
+                            placeholder="Digite a data de interesse"
+                            fullWidth
+                            name="Data"
+                            type="date"
+                            sx={{ marginBottom: '1.2rem', fontSize: '1.2rem' }}
+                          />
+
+                          <div
+                            style={{ display: 'flex', flexDirection: 'column' }}
+                          >
+                            <label
+                              style={{ fontSize: '1.2rem', color: '#7f7f7f' }}
+                            >
+                              Escolha o serviço desejado:
+                            </label>
+                            <select
+                              name="serviço"
+                              required
+                              style={{
+                                padding: '0.8rem',
+                                border: 'none',
+                                borderBottom: '1px solid #7f7f7f',
+                                backgroundColor: 'transparent',
+                                outlineColor: '#168D63',
+                              }}
+                            >
+                              <option value="Ônibus para viagem">
+                                Ônibus para viagem
+                              </option>
+                              <option value="Ônibus ou vans para passeios">
+                                Ônibus ou vans para passeios
+                              </option>
+                              <option value="Transporte executivo / Rotas">
+                                Transporte executivo / Rotas
+                              </option>
+                              <option value="outros">Outros</option>
+                            </select>
+                          </div>
+
+                          <Input
+                            name="Fale um pouco do serviço que deseja"
+                            placeholder="Descrição do serviço"
+                            fullWidth
+                            multiline
+                            rows={4}
+                            sx={{
+                              marginBottom: '1.2rem',
+                              fontSize: '1.2rem',
+                              marginTop: '1.2rem',
+                            }}
+                          />
+                          <Button
+                            type="submit"
+                            sx={{
+                              width: '100%',
+                              backgroundColor: '#168D63',
+                              color: '#FFFFFF',
+                              marginTop: '1.2rem',
+                            }}
+                          >
+                            Solicitar
+                          </Button>
+                        </form>
+                      </Box>
+                    </div>
+                  </div>
                 </Box>
               </Modal>
             </Box>

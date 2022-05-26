@@ -249,7 +249,7 @@ const Frota: React.FC = () => {
             </ImageListItem>
           ))}
         </ImageList> */}
-        <img src="Imagens.png" alt="Imagens frota" loading="lazy" />
+        <img src="mosaico.png" alt="Imagens frota" loading="lazy" />
       </Box>
     </>
   );
