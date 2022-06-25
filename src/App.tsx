@@ -10,6 +10,7 @@ const App: React.FC = () => {
     <ThemeProvider theme={LiderTheme()}>
       <CssBaseline />
       {/* <Header /> */}
+      
       <RoutesPage />
       <Footer />
     </ThemeProvider>

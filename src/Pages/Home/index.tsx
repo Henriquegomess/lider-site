@@ -49,24 +49,25 @@ const Home: React.FC = () => {
           options={{
             rewind: true,
             width: '100%',
-            height: '100%',
+            height: '100vh',
             gap: '1rem',
             autoplay: true,
           }}
         >
           <SplideSlide>
             <img
-              src="home.jpg"
-              alt="Image 1"
+              src="slider2.png"
+              alt="Image 2"
               width="100%"
               height="100%"
               loading="lazy"
+              style={{objectFit: "cover"}}
             />
           </SplideSlide>
           <SplideSlide>
             <img
-              src="teatro.jpg"
-              alt="Image 2"
+              src="home.jpg"
+              alt="Image 1"
               width="100%"
               height="100%"
               loading="lazy"
@@ -102,6 +103,15 @@ const Home: React.FC = () => {
         >
           <SplideSlide>
             <img
+              src="slider1.png"
+              alt="Image 2"
+              width="100%"
+              height="100%"
+              loading="lazy"
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <img
               src="home.jpg"
               alt="Image 1"
               width="100%"
@@ -111,16 +121,7 @@ const Home: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="slide2.jpg"
-              alt="Image 2"
-              width="100%"
-              height="100%"
-              loading="lazy"
-            />
-          </SplideSlide>
-          <SplideSlide>
-            <img
-              src="slide3.jpg"
+              src="frotaHome.png"
               alt="Image 1"
               width="100%"
               height="100%"
