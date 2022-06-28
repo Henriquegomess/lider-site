@@ -80,7 +80,12 @@ const Infra: React.FC = () => {
               width: { 'iphone-5-SE': '100%', lg: '80%' },
             }}
           >
-            <img src="imgFrotas.png" alt="Garagem" width="100%" height="100%" />
+            <img
+              src="MOSAICO - GARAGEM-min.png"
+              alt="Garagem"
+              width="100%"
+              height="100%"
+            />
           </Box>
 
           <Typography
@@ -166,7 +171,7 @@ const Infra: React.FC = () => {
             }}
           >
             <img
-              src="manutencao.png"
+              src="MOSAICO - MANUT-min.png"
               alt="Manutenção"
               width="100%"
               height="100%"
@@ -371,7 +376,12 @@ const Infra: React.FC = () => {
               width: { 'iphone-5-SE': '100%', lg: '70%' },
             }}
           >
-            <img src="limpeza.png" alt="Limpeza" width="100%" height="100%" />
+            <img
+              src="MOSAICO - LIMPEZA-min.png"
+              alt="Limpeza"
+              width="100%"
+              height="100%"
+            />
           </Box>
 
           <Typography

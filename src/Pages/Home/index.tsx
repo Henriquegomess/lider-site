@@ -61,16 +61,17 @@ const Home: React.FC = () => {
               width="100%"
               height="100%"
               loading="lazy"
-              style={{objectFit: "cover"}}
+              style={{ objectFit: 'cover' }}
             />
           </SplideSlide>
           <SplideSlide>
             <img
-              src="home.jpg"
+              src="sliderHome2.png"
               alt="Image 1"
               width="100%"
               height="100%"
               loading="lazy"
+              style={{ objectFit: 'cover' }}
             />
           </SplideSlide>
           <SplideSlide>
@@ -80,6 +81,7 @@ const Home: React.FC = () => {
               width="100%"
               height="100%"
               loading="lazy"
+              style={{ objectFit: 'cover' }}
             />
           </SplideSlide>
         </Splide>
