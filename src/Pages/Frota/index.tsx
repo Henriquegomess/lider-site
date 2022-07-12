@@ -7,6 +7,7 @@ import { Header } from '../../Components/Header';
 
 const Frota: React.FC = () => {
   const [showAdvancedMode, setShowAdvancedMode] = useState(false);
+  const [showAdvancedModeThird, setShowAdvancedModeThird] = useState(false);
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -69,7 +70,7 @@ const Frota: React.FC = () => {
           backgroundSize: 'cover',
         }}
       >
-        {!showAdvancedMode ? (
+        {!showAdvancedMode && !showAdvancedModeThird ? (
           <>
             <Box
               sx={{
@@ -106,46 +107,18 @@ const Frota: React.FC = () => {
           }}
         >
           <button
-            // style={{
-            //   backgroundColor: 'transparent',
-            //   border: 'none',
-            //   paddingRight: '1.4rem',
-            // }}
-            style={{
-              backgroundColor: showAdvancedMode ? 'white' : '#168D63',
-              border: 'none',
-              borderRadius: '5px',
-              boxShadow: '2px 2px 11px -4px #000000',
-              marginRight: '1.2rem',
-              padding: '0 2rem',
-              // color: showAdvancedMode ? 'white' : 'black',
-            }}
-            onClick={() => setShowAdvancedMode(false)}
-          >
-            <img
-              src={showAdvancedMode ? 'busIconGreen.svg' : 'busIcon.svg'}
-              alt="bus"
-              width="90px"
-              style={{ paddingTop: '1.2rem' }}
-            />
-            <h4
-              style={{
-                color: showAdvancedMode ? '#168D63' : 'white',
-                textTransform: 'uppercase',
-              }}
-            >
-              Minibus
-            </h4>
-          </button>
-          <button
             style={{
               backgroundColor: showAdvancedMode ? '#168D63' : 'white',
               border: 'none',
               boxShadow: '2px 2px 11px -4px #000000',
               borderRadius: '5px',
+              marginRight: '1.2rem',
               padding: '0 2rem',
             }}
-            onClick={() => setShowAdvancedMode(true)}
+            onClick={() => {
+              setShowAdvancedMode(true);
+              setShowAdvancedModeThird(false);
+            }}
           >
             <img
               src={
@@ -164,6 +137,69 @@ const Frota: React.FC = () => {
               }}
             >
               Micro-ônibus
+            </h4>
+          </button>
+          <button
+            // style={{
+            //   backgroundColor: 'transparent',
+            //   border: 'none',
+            //   paddingRight: '1.4rem',
+            // }}
+            style={{
+              backgroundColor: showAdvancedMode ? 'white' : '#168D63',
+              border: 'none',
+              borderRadius: '5px',
+              boxShadow: '2px 2px 11px -4px #000000',
+              marginRight: '1.2rem',
+              padding: '0 2rem',
+              // color: showAdvancedMode ? 'white' : 'black',
+            }}
+            onClick={() => {
+              setShowAdvancedMode(false);
+              setShowAdvancedModeThird(false);
+            }}
+          >
+            <img
+              src={showAdvancedMode ? 'busIconGreen.svg' : 'busIcon.svg'}
+              alt="bus"
+              width="90px"
+              style={{ paddingTop: '1.2rem' }}
+            />
+            <h4
+              style={{
+                color: showAdvancedMode ? '#168D63' : 'white',
+                textTransform: 'uppercase',
+              }}
+            >
+              Minibus
+            </h4>
+          </button>
+
+          <button
+            style={{
+              backgroundColor: showAdvancedModeThird ? '#168D63' : 'white',
+              border: 'none',
+              boxShadow: '2px 2px 11px -4px #000000',
+              borderRadius: '5px',
+              padding: '0 2rem',
+            }}
+            onClick={() => {
+              setShowAdvancedModeThird(true);
+            }}
+          >
+            <img
+              src={showAdvancedModeThird ? 'busWhite.svg' : 'busGreen.svg'}
+              alt="bus"
+              width="90px"
+              style={{ paddingTop: '1.2rem' }}
+            />
+            <h4
+              style={{
+                color: showAdvancedModeThird ? 'white' : '#168D63',
+                textTransform: 'uppercase',
+              }}
+            >
+              Ônibus
             </h4>
           </button>
         </div>
@@ -249,7 +285,7 @@ const Frota: React.FC = () => {
             </ImageListItem>
           ))}
         </ImageList> */}
-        <img src="mosaico.png" alt="Imagens frota" loading="lazy" />
+        <img src="MOSAICO-min.png" alt="Imagens frota" loading="lazy" />
       </Box>
     </>
   );

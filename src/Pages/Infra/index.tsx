@@ -223,18 +223,18 @@ const Infra: React.FC = () => {
             alignItems: 'center',
           }}
         >
-          {/* <Box
+          <Box
             sx={{
               width: { 'iphone-5-SE': '100%', lg: '80%' },
             }}
           >
             <img
-              src="seguranca.png"
+              src="MOSAICO - PROFISSIONAL.png"
               alt="Segurança"
               width="100%"
               height="100%"
             />
-          </Box> */}
+          </Box>
 
           <Typography
             sx={{
@@ -301,7 +301,7 @@ const Infra: React.FC = () => {
               fontFamily: 'Oswald',
             }}
           >
-            SEGURANÇA
+            MANUTENÇÃO
           </Typography>
         </Box>
         <Box
@@ -315,12 +315,12 @@ const Infra: React.FC = () => {
         >
           <Box
             sx={{
-              width: { 'iphone-5-SE': '100%', lg: '50%' },
+              width: { 'iphone-5-SE': '100%', lg: '80%' },
             }}
           >
             <img
-              src="seguranca.png"
-              alt="Segurança"
+              src="MOSAICO - SEGURANÇA-min.png"
+              alt="Manutenção"
               width="100%"
               height="100%"
             />
