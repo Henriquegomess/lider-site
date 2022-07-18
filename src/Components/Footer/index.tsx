@@ -10,6 +10,22 @@ const Footer: React.FC = () => {
         color: '#FFF',
       }}
     >
+      <div>
+        <img
+          src="LOGOTIPO LÍDER - BRANCO_Prancheta.png"
+          alt="Facebook"
+          width={300}
+          style={{ paddingLeft: '4.8rem' }}
+        />
+      </div>
+
+      <Divider
+        variant="inset"
+        sx={{
+          maxWidth: 560,
+          backgroundColor: '#FFF',
+        }}
+      />
       <Typography
         style={{
           color: '#FFF',
@@ -21,13 +37,6 @@ const Footer: React.FC = () => {
       >
         MATRIZ
       </Typography>
-      <Divider
-        variant="inset"
-        sx={{
-          maxWidth: 560,
-          backgroundColor: '#FFF',
-        }}
-      />
       <Typography
         style={{
           fontSize: '0.8rem',
