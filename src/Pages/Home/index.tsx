@@ -215,7 +215,7 @@ const Home: React.FC = () => {
         <img
           data-aos="flip-left"
           data-aos-duration="1000"
-          src="imagem3.png"
+          src="QUEM SOMOS-min.jpg"
           alt="Onibus"
           style={{
             width: '50%',
@@ -488,7 +488,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="custo.png"
+                  src="Custos Menores 1.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
@@ -517,7 +517,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="capital.png"
+                  src="Capital Movimentado 1.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
@@ -546,7 +546,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="acompanhamento.png"
+                  src="Rastramento em Tempo Real 1.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
@@ -585,7 +585,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="orcamento.png"
+                  src="Previsibilidade de Orçamento 1.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
@@ -614,7 +614,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="monitoramento.png"
+                  src="Monitoramento 1.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
@@ -643,7 +643,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="like.png"
+                  src="Suporte de Atendimento 1.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"

@@ -26,6 +26,8 @@ const style = {
   width: '70%',
   bgcolor: 'background.paper',
   boxShadow: 24,
+  margin: 0,
+  padding: 0,
   // p: 4,
 };
 
@@ -312,7 +314,11 @@ export const Header: React.FC = () => {
               >
                 Orçamento
               </Button>
-              <Modal open={open} onClose={handleClose}>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                style={{ margin: 0, padding: 0 }}
+              >
                 <Box sx={style}>
                   <div
                     style={{
@@ -320,10 +326,23 @@ export const Header: React.FC = () => {
                       flexDirection: 'row',
                       width: '100%',
                       height: '100%',
+                      margin: 0,
+                      padding: 0,
                     }}
                   >
-                    <div style={{ width: '50%', height: '100%' }}>
-                      <img src="imagemodal.png" alt="" />
+                    <div
+                      style={{
+                        width: '50%',
+                        height: '100%',
+                        margin: 0,
+                        padding: 0,
+                      }}
+                    >
+                      <img
+                        src="Ao lado do Formulário 1 (2).png"
+                        alt=""
+                        style={{ objectFit: 'contain', margin: 0, padding: 0 }}
+                      />
                     </div>
                     <div
                       style={{
