@@ -72,18 +72,21 @@ const Footer: React.FC = () => {
         <a
           href="https://www.facebook.com/AmazonLider/"
           style={{ paddingRight: '1.2rem' }}
+          target="_blank"
         >
           <img src="face.png" alt="Facebook" />
         </a>
         <a
-          href="https://www.instagram.com/lider.manaus/"
+          href="https://www.instagram.com/amazon.lider/"
           style={{ paddingRight: '1.2rem' }}
+          target="_blank"
         >
           <img src="insta.png" alt="Instagram" />
         </a>
         <a
           href="https://api.whatsapp.com/send?phone=92988422072&text=Texto%20aqui"
           style={{ paddingRight: '1.2rem' }}
+          target="_blank"
         >
           <img src="wpp.png" alt="WhatsApp" />
         </a>

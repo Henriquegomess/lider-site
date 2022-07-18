@@ -1,18 +1,21 @@
 import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
+import { CardBusComponent } from '../../Components/CardBus';
 import { CardExecutivoComponent } from '../../Components/CardExecutivo';
 import { CardRodoviarioComponent } from '../../Components/CardRodoviario';
 import { Header } from '../../Components/Header';
 
 const Frota: React.FC = () => {
-  const [showAdvancedMode, setShowAdvancedMode] = useState(false);
+  const [showAdvancedMode, setShowAdvancedMode] = useState<
+    'left' | 'center' | 'right'
+  >('left');
   const [showAdvancedModeThird, setShowAdvancedModeThird] = useState(false);
-  const [value, setValue] = React.useState(0);
+  // const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
+  // const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  //   setValue(newValue);
+  // };
   return (
     <>
       <Header />
@@ -70,7 +73,7 @@ const Frota: React.FC = () => {
           backgroundSize: 'cover',
         }}
       >
-        {!showAdvancedMode && !showAdvancedModeThird ? (
+        {showAdvancedMode === 'left' ? (
           <>
             <Box
               sx={{
@@ -81,10 +84,10 @@ const Frota: React.FC = () => {
                 justifyContent: 'center',
               }}
             >
-              <CardExecutivoComponent />
+              <CardRodoviarioComponent />
             </Box>
           </>
-        ) : (
+        ) : showAdvancedMode === 'center' ? (
           <>
             <section
               style={{
@@ -95,9 +98,21 @@ const Frota: React.FC = () => {
                 justifyContent: 'center',
               }}
             >
-              <CardRodoviarioComponent />
+              <CardExecutivoComponent />
             </section>
           </>
+        ) : (
+          <section
+            style={{
+              // height: '60vh',
+              padding: '0.8rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <CardBusComponent />
+          </section>
         )}
         <div
           style={{
@@ -108,7 +123,8 @@ const Frota: React.FC = () => {
         >
           <button
             style={{
-              backgroundColor: showAdvancedMode ? '#168D63' : 'white',
+              backgroundColor:
+                showAdvancedMode === 'left' ? '#168D63' : 'white',
               border: 'none',
               boxShadow: '2px 2px 11px -4px #000000',
               borderRadius: '5px',
@@ -116,13 +132,12 @@ const Frota: React.FC = () => {
               padding: '0 2rem',
             }}
             onClick={() => {
-              setShowAdvancedMode(true);
-              setShowAdvancedModeThird(false);
+              setShowAdvancedMode('left');
             }}
           >
             <img
               src={
-                showAdvancedMode
+                showAdvancedMode === 'left'
                   ? 'executivoIconWhite.svg'
                   : 'executivoIconGreen.svg'
               }
@@ -132,7 +147,7 @@ const Frota: React.FC = () => {
             />
             <h4
               style={{
-                color: showAdvancedMode ? 'white' : '#168D63',
+                color: showAdvancedMode === 'left' ? 'white' : '#168D63',
                 textTransform: 'uppercase',
               }}
             >
@@ -146,7 +161,8 @@ const Frota: React.FC = () => {
             //   paddingRight: '1.4rem',
             // }}
             style={{
-              backgroundColor: showAdvancedMode ? 'white' : '#168D63',
+              backgroundColor:
+                showAdvancedMode === 'center' ? '#168D63' : 'white',
               border: 'none',
               borderRadius: '5px',
               boxShadow: '2px 2px 11px -4px #000000',
@@ -155,19 +171,22 @@ const Frota: React.FC = () => {
               // color: showAdvancedMode ? 'white' : 'black',
             }}
             onClick={() => {
-              setShowAdvancedMode(false);
-              setShowAdvancedModeThird(false);
+              setShowAdvancedMode('center');
             }}
           >
             <img
-              src={showAdvancedMode ? 'busIconGreen.svg' : 'busIcon.svg'}
+              src={
+                showAdvancedMode === 'center'
+                  ? 'busIcon.svg'
+                  : 'busIconGreen.svg'
+              }
               alt="bus"
               width="90px"
               style={{ paddingTop: '1.2rem' }}
             />
             <h4
               style={{
-                color: showAdvancedMode ? '#168D63' : 'white',
+                color: showAdvancedMode === 'center' ? 'white' : '#168D63',
                 textTransform: 'uppercase',
               }}
             >
@@ -177,25 +196,28 @@ const Frota: React.FC = () => {
 
           <button
             style={{
-              backgroundColor: showAdvancedModeThird ? '#168D63' : 'white',
+              backgroundColor:
+                showAdvancedMode === 'right' ? '#168D63' : 'white',
               border: 'none',
               boxShadow: '2px 2px 11px -4px #000000',
               borderRadius: '5px',
               padding: '0 2rem',
             }}
             onClick={() => {
-              setShowAdvancedModeThird(true);
+              setShowAdvancedMode('right');
             }}
           >
             <img
-              src={showAdvancedModeThird ? 'busWhite.svg' : 'busGreen.svg'}
+              src={
+                showAdvancedMode === 'right' ? 'busWhite.svg' : 'busGreen.svg'
+              }
               alt="bus"
               width="90px"
               style={{ paddingTop: '1.2rem' }}
             />
             <h4
               style={{
-                color: showAdvancedModeThird ? 'white' : '#168D63',
+                color: showAdvancedMode === 'right' ? 'white' : '#168D63',
                 textTransform: 'uppercase',
               }}
             >

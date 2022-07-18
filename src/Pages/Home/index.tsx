@@ -488,7 +488,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="Custos Menores 1.png"
+                  src="Custos Menores.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
@@ -517,7 +517,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="Capital Movimentado 1.png"
+                  src="Capital Movimentado.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
@@ -546,7 +546,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="Rastramento em Tempo Real 1.png"
+                  src="Rastramento em Tempo Real.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
@@ -585,7 +585,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="Previsibilidade de Orçamento 1.png"
+                  src="Previsibilidade de Orçamento.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
@@ -614,7 +614,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="Monitoramento 1.png"
+                  src="Monitoramento.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
@@ -643,7 +643,7 @@ const Home: React.FC = () => {
                 }}
               >
                 <img
-                  src="Suporte de Atendimento 1.png"
+                  src="Suporte de Atendimento.png"
                   alt="onibus"
                   style={{ width: '30%' }}
                   loading="lazy"
