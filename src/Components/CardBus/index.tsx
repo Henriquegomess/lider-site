@@ -43,7 +43,7 @@ export const CardBusComponent: React.FC = () => {
         >
           <SplideSlide>
             <img
-              src="Micro.jpg"
+              src="Ônibus 2-min.jpg"
               alt="Image 1"
               width="100%"
               height="100%"
@@ -52,7 +52,7 @@ export const CardBusComponent: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="Micro2.jpg"
+              src="Ônibus1-min.jpg"
               alt="Image 2"
               width="100%"
               height="100%"
@@ -61,7 +61,16 @@ export const CardBusComponent: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="Micro.jpg"
+              src="onibus 3-min.jpg"
+              alt="Image 1"
+              width="100%"
+              height="100%"
+              loading="lazy"
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <img
+              src="onibus 4-min.jpg"
               alt="Image 1"
               width="100%"
               height="100%"

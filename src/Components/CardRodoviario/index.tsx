@@ -32,43 +32,13 @@ export const CardRodoviarioComponent: React.FC = () => {
           height: { 'iphone-5-SE': '50%' },
         }}
       >
-        <Splide
-          options={{
-            rewind: true,
-            width: '100%',
-            // height: '90vh',
-            gap: '1rem',
-            autoplay: true,
-          }}
-        >
-          <SplideSlide>
-            <img
-              src="Micro.jpg"
-              alt="Image 1"
-              width="100%"
-              height="100%"
-              loading="lazy"
-            />
-          </SplideSlide>
-          <SplideSlide>
-            <img
-              src="Micro2.jpg"
-              alt="Image 2"
-              width="100%"
-              height="100%"
-              loading="lazy"
-            />
-          </SplideSlide>
-          <SplideSlide>
-            <img
-              src="Micro.jpg"
-              alt="Image 1"
-              width="100%"
-              height="100%"
-              loading="lazy"
-            />
-          </SplideSlide>
-        </Splide>
+        <img
+          src="Microonibus1-min.jpg"
+          alt="Image 1"
+          width="100%"
+          height="100%"
+          loading="lazy"
+        />
       </Box>
       <CardContent>
         <Typography

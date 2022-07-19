@@ -301,7 +301,7 @@ const Infra: React.FC = () => {
               fontFamily: 'Oswald',
             }}
           >
-            MANUTENÇÃO
+            MONITORAMENTO
           </Typography>
         </Box>
         <Box

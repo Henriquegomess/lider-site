@@ -245,7 +245,7 @@ const Frota: React.FC = () => {
             color: '#168D63',
             fontFamily: 'Oswald',
             p: '0.8rem',
-            fontWeight: 'lighter',
+            fontWeight: 'regular',
           }}
         >
           Viaje com o conforto que você merece! Viaje sem se preocupar.
@@ -273,6 +273,7 @@ const Frota: React.FC = () => {
             alignItems: 'center',
             textAlign: 'center',
             textTransform: 'uppercase',
+            fontWeight: 800,
           }}
         >
           Frota terceirizada é mais economia e eficiência para sua empresa

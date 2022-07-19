@@ -43,7 +43,7 @@ export const CardExecutivoComponent: React.FC = () => {
         >
           <SplideSlide>
             <img
-              src="Minibus.jpg"
+              src="MiniBus1-min.jpg"
               alt="Image 1"
               width="100%"
               height="100%"
@@ -52,17 +52,8 @@ export const CardExecutivoComponent: React.FC = () => {
           </SplideSlide>
           <SplideSlide>
             <img
-              src="Minibus.jpg"
+              src="MiniBus2-min.jpg"
               alt="Image 2"
-              width="100%"
-              height="100%"
-              loading="lazy"
-            />
-          </SplideSlide>
-          <SplideSlide>
-            <img
-              src="Minibus.jpg"
-              alt="Image 1"
               width="100%"
               height="100%"
               loading="lazy"
