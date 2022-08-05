@@ -12,6 +12,7 @@ export const CardGreenComponent: React.FC = () => {
         color: '#FFF',
         width: '100%',
         p: '0.8rem',
+        textAlign: 'center',
       }}
     >
       <CardContent>

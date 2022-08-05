@@ -490,7 +490,7 @@ const Home: React.FC = () => {
                 <img
                   src="Custos Menores.png"
                   alt="onibus"
-                  style={{ width: '30%' }}
+                  style={{ width: '20%' }}
                   loading="lazy"
                 />
                 <Typography
@@ -519,7 +519,7 @@ const Home: React.FC = () => {
                 <img
                   src="Capital Movimentado.png"
                   alt="onibus"
-                  style={{ width: '30%' }}
+                  style={{ width: '20%' }}
                   loading="lazy"
                 />
                 <Typography
@@ -548,7 +548,7 @@ const Home: React.FC = () => {
                 <img
                   src="Rastramento em Tempo Real.png"
                   alt="onibus"
-                  style={{ width: '30%' }}
+                  style={{ width: '20%' }}
                   loading="lazy"
                 />
                 <Typography
@@ -587,7 +587,7 @@ const Home: React.FC = () => {
                 <img
                   src="Previsibilidade de Orçamento.png"
                   alt="onibus"
-                  style={{ width: '30%' }}
+                  style={{ width: '20%' }}
                   loading="lazy"
                 />
                 <Typography
@@ -616,7 +616,7 @@ const Home: React.FC = () => {
                 <img
                   src="Monitoramento.png"
                   alt="onibus"
-                  style={{ width: '30%' }}
+                  style={{ width: '20%' }}
                   loading="lazy"
                 />
                 <Typography
@@ -645,7 +645,7 @@ const Home: React.FC = () => {
                 <img
                   src="Suporte de Atendimento.png"
                   alt="onibus"
-                  style={{ width: '30%' }}
+                  style={{ width: '20%' }}
                   loading="lazy"
                 />
                 <Typography
