@@ -21,7 +21,7 @@ const Frota: React.FC = () => {
       <Header />
       <Box
         sx={{
-          backgroundImage: `url(/NossaFrota-Home.JPG)`,
+          backgroundImage: `url(/NewFrota.JPG)`,
           backgroundRepeat: 'no-repeat',
           width: '100%',
           height: { lg: '100vh', 'iphone-5-SE': '42vh' },
@@ -258,10 +258,11 @@ const Frota: React.FC = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundImage: `url(/bg_escuro.png)`,
+          backgroundImage: `url(/newImageFrota.png)`,
           backgroundRepeat: 'no-repeat',
           width: '100%',
           backgroundSize: 'cover',
+          objectFit: 'fill',
         }}
       >
         <Typography
