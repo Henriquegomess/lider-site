@@ -8,7 +8,7 @@ const Infra: React.FC = () => {
       <Header />
       <Box
         sx={{
-          backgroundImage: `url(/slide3.jpg)`,
+          backgroundImage: `url(/NossaFrota-Home.JPG)`,
           backgroundRepeat: 'no-repeat',
           width: '100%',
           height: { lg: '100vh', 'iphone-5-SE': '42vh' },
